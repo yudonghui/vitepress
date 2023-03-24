@@ -28,6 +28,9 @@
 **yarn -> yarn init**
 **pnpm -> pnpm init**
 
+
+
+
 ###安装 vitepress
 为了方便书写教程，之后的安装命令都是用 pnpm
 安装 vitepress 使用如下命令：
