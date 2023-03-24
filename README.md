@@ -26,7 +26,8 @@
 然后使用自己喜欢的包管理方式，可以是 npm、yarn、pnpm，初始化项目即可：
 
 **npm -> npm init -y**
-  **yarn -> yarn init**
+
+**yarn -> yarn init**
 
 **pnpm -> pnpm init**
 
@@ -65,15 +66,15 @@ VitePress 将在 http://localhost:5173 上展示你自己的网站，并且是�
 
 vitepress 的目录结构
 .
-├─ docs
-│  ├─ .vitepress
-│  │   ├─ theme
-│  │   │  └─ index.js
-│  │   └─ config.js
-│  └─ index.md
-├─ .gitignore
-├─ node_modules
-└─ package.json
+> docs
+>> .vitepress
+>>> theme
+>>>> index.js
+>>> config.js
+>> index.md
+> .gitignore
+> node_modules
+> package.json
 
 大概是这么个结构，其实没有具体规定，其实只要路径对匹配了就行了，但是 .vitepress 必须有，然后 config.js 也要有，否则没办法配置了。
 
