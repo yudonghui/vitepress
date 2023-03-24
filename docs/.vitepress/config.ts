@@ -15,16 +15,16 @@ export default defineConfig({
     //   { text: 'about', link: '/markdown-examples' }
     // ],
     siteTitle: false,
-    aside: true,
-    sidebar: [
-       {
-         text: 'Examples',
-         items: [
-           { text: 'Markdown Examples', link: '/markdown-examples' },
-           { text: 'Runtime API Examples', link: '/api-examples' }
-         ]
-       }
-     ],
+    aside: false,
+     //sidebar: [
+       // {
+       //   text: 'Examples',
+     //     items: [
+     //       { text: 'Markdown Examples', link: '/markdown-examples' },
+        //    { text: 'Runtime API Examples', link: '/api-examples' }
+          //]
+        //}
+      //],
 
     // socialLinks: [
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
