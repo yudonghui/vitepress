@@ -13,6 +13,7 @@
 如果提示说无权限写入文件夹的话那就加 sudo 安装即可
 
 然后运行命令启动项目
+
  **pnpm run docs:dev**
 
 最后打开链接应该就能看到了，希望大家喜欢这个文档网站
@@ -61,9 +62,14 @@
 }
 
 然后本地启动服务：
+
 **pnpm run docs:dev**
+
 VitePress 将在 http://localhost:5173 上展示你自己的网站，并且是热更新的。
 
+编译命令
+
+**pnpm run docs:dev**
 vitepress 的目录结构
 .
 > docs
