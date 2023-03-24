@@ -17,7 +17,7 @@
 最后打开链接应该就能看到了，希望大家喜欢这个文档网站
 顺便说一下，我还写了一个刷算法题的网站，都是用 js 写的，网址在这里，想看的可以看看，这是用 vuepress 写的，如果您有 vuepress 基础那么会非常容易上手，好了废话不多说，接下来就介绍怎么使用 vitepress。
 
-# 创建项目
+## 创建项目
 首先选一个自己喜欢的文件及，然后在这个文件夹里创建一个 vitepress 项目文件夹，自己想叫啥叫啥，然后进入这个文件夹即可，如果大家觉得麻烦可以进入文件夹后运行如下命令：
 
  mkdir vitepress && cd vitepress
@@ -25,14 +25,12 @@
 然后使用自己喜欢的包管理方式，可以是 npm、yarn、pnpm，初始化项目即可：
 
 **npm -> npm init -y**
-**yarn -> yarn init
+**yarn -> yarn init**
 **pnpm -> pnpm init**
 
-安装 vitepress
-为了方便书写教程，之后的安装命令都是用 pnpm 了，请大家谅解哈。
-
+###安装 vitepress
+为了方便书写教程，之后的安装命令都是用 pnpm
 安装 vitepress 使用如下命令：
-
  **pnpm add -D vitepress vue**
 
 然后创建一个 md 文档：
