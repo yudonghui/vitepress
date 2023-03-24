@@ -44,13 +44,20 @@
 将以下的内容写入 package.json 文件：
 
 {
+
 ...
    "scripts": {
+
     "docs:dev": "vitepress dev docs",
+
     "docs:build": "vitepress build docs",
+
     "docs:preview": "vitepress preview docs"
+
   },
+
   ...
+
 }
 
 然后本地启动服务：
