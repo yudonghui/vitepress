@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s,x as o}from"./chunks/framework.cd9250a1.js";const x=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"index.md"}'),a={name:"index.md"},n=o("p",null,"Hello VitePress这都是发工资的风格",-1),r=[n];function c(d,i,_,l,p,m){return s(),t("div",null,r)}const u=e(a,[["render",c]]);export{x as __pageData,u as default};
