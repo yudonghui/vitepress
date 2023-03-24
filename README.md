@@ -1,5 +1,5 @@
 # vitepress
-
+https://blog.csdn.net/ox4f5da2/article/details/128975046
 作者项目：https://github.com/ox4f5da2/seven-bit-docs.git
 
 然后安装依赖
@@ -73,7 +73,7 @@ VitePress 将在 http://localhost:5173 上展示你自己的网站，并且是�
 
 vitepress 的目录结构
 
-　 ．docs　
+　 ．docs　　
 　
 　　 .vitepress　　
 
