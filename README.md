@@ -26,8 +26,7 @@
 然后使用自己喜欢的包管理方式，可以是 npm、yarn、pnpm，初始化项目即可：
 
 **npm -> npm init -y**
-
-**yarn -> yarn init**
+  **yarn -> yarn init**
 
 **pnpm -> pnpm init**
 
