@@ -4,8 +4,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "gjjapp",
-  titleTemplate: false,
+  title: "ydhapp",
+  titleTemplate: true,
   // description: "myweb",
   themeConfig: {
     
