@@ -44,8 +44,8 @@
 将以下的内容写入 package.json 文件：
 
 {
-  ...
-   "scripts": {‘’
+...
+   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
