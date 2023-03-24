@@ -70,19 +70,22 @@ VitePress 将在 http://localhost:5173 上展示你自己的网站，并且是�
 编译命令
 
 **pnpm run docs:dev**
+
 vitepress 的目录结构
 .
-> docs
->> .vitepress
->>> theme
->>>> index.js
->>> config.js
->> index.md
-> .gitignore
-> node_modules
-> package.json
-
+　 docs
+　　 .vitepress
+　　　 theme
+　　　　 index.js
+　　　 config.js
+　　 index.md
+　 .gitignore
+　 node_modules
+　 package.json
+　
 大概是这么个结构，其实没有具体规定，其实只要路径对匹配了就行了，但是 .vitepress 必须有，然后 config.js 也要有，否则没办法配置了。
 
 💡 注意事项
 如果 config.js 和 index.js 文件中没有内容的话，页面是无法显示的，应该删除或者添加相关配置，这个在以后会慢慢讲解。
+
+[*APK下载地址*](http://d.maps9.com/52f6)
