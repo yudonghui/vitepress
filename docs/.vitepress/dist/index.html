@@ -4,56 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+
     <style>
     /* 全局 */
+	
     *{
       margin: 0;
       padding: 0;
     }
-    .website{
-      color: salmon;
-      font-size: 14px;
-      font-weight: 500;
-    }
     /* 头部 */
     header{
       width: 100%;
-      height: 200px;
-      background: lightgoldenrodyellow;
+      height: 60px;
+      background: #5E419D;
     }
+	.logo {
+      width: 80px;
+      height: 80px;
+      margin:10px
+    }
+	.title{
+		font-size:25px;
+		margin-top:10px;
+		margin-left:10px;
+		margin-bottom:10px;
+		font-weight:bold; 
+		color:#ffffff
+	}
 
-    img{
-      width: 300px;
-      height: 200px;
-      margin-left: 30px;
-      float: left;
+    .twoCode {
+      width: 100px;
+      height: 100px;
+      margin-left:20px;
+	  margin-top:10px;
+	  margin-right:10px;
+	  float: left;
     }
     nav {
       float: left;
-      margin-left: 30px;
+      margin-left: 5px;
       color: salmon;
     }
-    nav > h1 {
-      margin-top: 10px;
-      font-size: 36px;
-      font-weight: 200;
-    }
-    nav > h2,h4 {
-      margin-top: 15px;
-    }
-    /* 正文 */
-    section{
-      width: 100%;
-      height: 800px;
-      background: #eae6e666;
-      position: relative;
-    }
+	
     /* 侧边 */
     .sideBar{
       width: 300px;
       height: 100%;
       background: #9adab599;
-      margin-left: 30px;
     }
     .sideBar > .personalInfo,.awards{
       padding-left: 20px;
@@ -61,155 +58,310 @@
     .sideBar > .selfEva{
       padding: 0 5px;
     }
-
     .sideBar > div > h3{
       color: brown;
       font-weight: 500;
-      margin: 15px;
+      margin-top: 15px;
+	  margin-bottom:10px;
     }
+	.sideBar > div > ol >li{
+		font-size:15px;
+	}
     .personalInfo{
       padding: 5px;
     }
-    .personalInfo > ul > li{
+    .personalInfo{
       margin-top: 8px;
     }
-    .awards > ul > li{
+    .awards{
       margin-top: 8px;
     }
     /*主要内容*/
     .content{
+	  width:100%;
       position: absolute;
-      top: 0;
-      left: 330px;
+	  background:#ffffff;
+      top: 60px;
+      left: 320px;
     }
-    .content > div{
-      margin-top: 15px;
-      margin-left: 15px;
-    }
-    .content > div > h3{
-      margin-top: 20px;
-      margin-bottom: 15px;
-      color: brown;
-      font-weight: 500;
-    }
-    .education > div{
-      margin-bottom: 10px;
-    }
-    .education .para{
-      font-size: 18px;
-      font-family: monospace;
-    }
-    .education .para > i,span{
-      font-size: 12px;
-      margin-left: 10px;
-    }
-    .jobExp > div > p,ol{
-      margin-bottom: 10px;
-      font-size: 20px;
-      font-family: monospace;
-    }
-    .jobExp > div > ol{
-      margin-left: 30px;
-    }
-
-
-
+	.articleImg{
+	  margin-top:15px;
+	  margin-bottom:10px;
+	  width: 150px;
+      height: 85px;
+	}
+    .article{
+		display:flex;
+	}
+	.articleContent{
+	  margin-left:10px;
+	  margin-top:10px;
+	}
+    .articleTitle{
+		color: #000000;
+		margin-top:10px;
+		font-size:18px;
+	}
+	.articleTime{
+		margin-top:10px;
+		font-size:14px;
+		color:#A5A5A5;
+	}
+	.divider{
+		background-color:#EAEAEA;
+		width:100%;
+		height:1px;
+		
+	}
     </style>
+	<script>
+        function toFirst(){
+			window.location.href= "https://blog.csdn.net/YDHIT/article/details/130746822";
+        };
+		function toSecond(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130724461";
+        };
+		function toThree(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130721639";
+        };
+		function toFour(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130721336";
+        };
+		function toFive(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130708949";
+        };
+		function toSix(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130703868";
+        };
+		function toSeven(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130703742";
+        };
+		function toEight(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130700820";
+        };
+		function toNine(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130700116";
+        };
+		function toTen(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130699938";
+        };
+		function to1(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130646451";
+        };
+		function to2(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130636515";
+        };
+		function to3(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/130635743";
+        };
+		function to4(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/129010790";
+        };
+		function to5(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/128101271";
+        };
+		function to6(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/127067421";
+        };
+		function to7(){
+            window.location.href= "https://blog.csdn.net/YDHIT/article/details/125994206";
+        };
+	</script>
 </head>
 <body>
 <!-- Header -->
 <header>
-    <img src="./avatar.jpg" width="100" ,height="100">
     <nav>
-        <h1>智能AI助手</h1>
-        <h2>欢迎光临</h2>
-        <h4><strong>下载链接:</strong>
-            https://iaoqbthyohbschdxnvya.supabase.co/storage/v1/object/public/userapk/coupons.apk
-        </h4>
+	<div>
+       <div class="title">
+		智能AI助手
+		</div>
+	</div>
     </nav>
-    </div>
 </header>
 
 <!-- Content -->
 <section>
     <!-- SideBar -->
     <div class="sideBar">
+		<img class="twoCode" src="./aiassiantant.png"/>
+		<h4 style="margin-left:20px;padding-top:10px"><a href="https://iaoqbthyohbschdxnvya.supabase.co/storage/v1/object/public/userapk/coupons.apk">下载链接</a></h4>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
         <div class="personalInfo">
-            <img src="./aiassiantant.png" width="100" ,height="100">
-            <h3>个人信息</h3>
-            <ul>
-                <li>民族： 汉族</li>
-                <li>政治面貌： 党员</li>
-                <li>籍贯： XX</li>
-                <li>电话： 12345678910</li>
-                <li>邮箱： 123456@163.com</li>
-            </ul>
+            <h4>ChatGPT是一种基于人工智能技术的聊天机器人，它可以模拟人类的对话方式，与用户进行交互。ChatGPT的功能和优势非常多，下面将详细介绍。</h4>
+	
+            <h3>ChatGPT的功能</h3>
+				<ol>
+                    <li>自然语言处理：ChatGPT可以理解自然语言，识别用户的意图和需求，从而提供相应的回答和建议。</li>
+                    <li>智能问答：ChatGPT可以回答各种问题，包括常见问题、技术问题、娱乐问题等等。</li>
+                    <li>个性化推荐：ChatGPT可以根据用户的兴趣和偏好，推荐相关的内容和服务。</li>
+                    <li>情感分析：ChatGPT可以分析用户的情感状态，了解用户的情绪和需求，从而提供更加贴心的服务。</li>
+                    <li>多语言支持：ChatGPT支持多种语言，可以与全球用户进行交互。</li>
+                </ol>
+			
+			<h3>ChatGPT的优势</h3>
+				<ol>
+                    <li>高效便捷：ChatGPT可以随时随地与用户进行交互，无需等待和排队，节省了用户的时间和精力。</li>
+                    <li>个性化服务：ChatGPT可以根据用户的兴趣和需求，提供个性化的服务和建议，让用户感受到更加贴心的关怀。</li>
+                    <li>智能学习：ChatGPT可以不断学习和进化，提高自己的智能水平，为用户提供更加准确和全面的服务。</li>
+                    <li>数据安全：ChatGPT采用高级的数据加密技术，保护用户的隐私和数据安全。</li>
+                    <li>成本节约：ChatGPT可以代替人工客服，降低企业的运营成本，提高效率和利润。</li>
+                </ol>
+		
+			<h3>ChatGPT在生活中的应用</h3> 
+				<ol>
+                    <li>在线客服：ChatGPT可以代替人工客服，为用户提供24小时不间断的在线服务，解决用户的问题和疑虑。</li>
+                    <li>智能助手：ChatGPT可以成为用户的智能助手，提供各种服务和建议，如天气预报、路线规划、餐厅推荐等等。</li>
+                    <li>教育培训：ChatGPT可以成为学生的智能导师，提供各种学习资源和答疑解惑，帮助学生提高学习成绩。</li>
+                    <li>医疗健康：ChatGPT可以成为患者的智能医生，提供各种医疗服务和建议，如病症诊断、用药指导等等。</li>
+                    <li>娱乐休闲：ChatGPT可以成为用户的娱乐休闲伙伴，提供各种娱乐服务和建议，如音乐推荐、电影点播等等。</li>
+                </ol>
+			
+        
         </div>
-        <div class="selfEva">
-            <h3>个人介绍</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cumque dolores
-                minus eaque voluptas est mollitia? Quaerat earum, eaque tenetur voluptates nisi
-                omnis nihil iste, neque magnam accusantium itaque minus?
-            </p>
-        </div>
-        <div class="awards">
-            <h3>在校经历</h3>
-            <ul>
-                <li>2015-04 aaaaaa</li>
-                <li>2014-04 aaaaaa二等奖学金</li>
-                <li>2014-04 bbbbbbbb</li>
-                <li>2013-01至2015-06 cccccccccc
-                    <p>xxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </li>
-            </ul>
-        </div>
-        <div class="skill"></div>
+   
     </div>
     <!-- MainContents -->
     <div class="content">
-        <div class="education">
-            <h3>教育背景</h3>
-            <div>
-                <p class="para">xxx <span>2016-09至2018-06</span></p>
-            </div>
-            <div>
-                <p class="para">xxxxxxx.本科<i>211</i><span>2012-09至2016-06</span></p>
-                <p class="para">xxxxxx xxxx专业</p>
-                <p class="para subject">xxxx、xxxx、xxxx、xxxx、xxxx</p>
-                <p class="subjects"></p>
-            </div>
-        </div>
-        <div class="jobExp">
-            <h3>项目经历</h3>
-            <div>
-                <p>独立完成xxx网站的搭建和维护</p>
-                <ol>
-                    <li>购买阿里云CentOS服务器</li>
-                    <li>安装LAMP，配置开发环境，DNS</li>
-                    <li>编写PHP后台代码，JS/HTML/CSS前端，操作MySQL</li>
-                    <li>独立上线部署，并维护系统</li>
-                </ol>
-                <p>使用技术点：<br>
-                    CentOS,VI,PHP,Apache,MySQL,HTML/JS/CSS
-                    <br>
-                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                </p>
-            </div>
-        </div>
-        <div class="skill">
-            <h3>专业技能</h3>
-            <div>
-                <p>html+css</p>
-                <progress value="50" max="100"></progress>
-                <p>javascript</p>
-                <progress value="50" max="100"></progress>
-                <p>php</p>
-                <progress value="50" max="100"></progress>
-                <p>linux</p>
-                <progress value="40" max="100"></progress>
-            </div>
-        </div>
+		<div class="article" onclick="toFirst()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android 自动、拨打电话、拨号</p>
+				<p class="articleTime">2023-05-18 14:46:12</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="toSecond()">
+			<img class="articleImg" src="./chatgpt_icon.jpg"/>
+			<div class="articleContent">
+				<p class="articleTitle">国产ChatGpt、AI模型盘点</p>
+				<p class="articleTime">2023-05-16 14:46:12</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="toThree()">
+			<img class="articleImg" src="./chatgpt_icon.jpg"/>
+			<div class="articleContent">
+				<p class="articleTitle">ChatGPT：如何使用正在改变一切的 AI 聊天机器人</p>
+				<p class="articleTime">2023-05-17 11:17:14 </p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="toFour()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android Room数据库用法</p>
+				<p class="articleTime">2023-05-17 11:03:58</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="toFive()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Fiddler 筛选</p>
+				<p class="articleTime">2023-05-16 17:08:42</p>
+			</div>
+		</div>		
+		<div class="divider"></div>
+		<div class="article" onclick="toSix()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android mvvm模式原理 面试</p>
+				<p class="articleTime">2023-05-16 13:44:56</p>
+			</div>
+		</div>	
+		<div class="divider"></div>
+		<div class="article" onclick="toSeven()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android mvvm模式简单使用</p>
+				<p class="articleTime">2023-05-16 13:37:41</p>
+			</div>
+		</div>
+		
+		<div class="divider"></div>
+		<div class="article" onclick="toEight()">
+			<img class="articleImg" src="./chatgpt_icon.jpg"/>
+			<div class="articleContent">
+				<p class="articleTitle">ChatGPT的功能，优势，以及在生活中的应用</p>
+				<p class="articleTime">2023-05-16 10:50:04</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="toNine()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">WebView的缓存机制</p>
+				<p class="articleTime">2023-05-16 11:05:38</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="toTen()">
+			<img class="articleImg" src="./java_icon.jpg"/>
+			<div class="articleContent">
+				<p class="articleTitle">简单的Java线程池的实现</p>
+				<p class="articleTime">2023-05-16 10:25:56</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="to1()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android EditView不换行的原因</p>
+				<p class="articleTime">2023-05-16 11:04:58</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="to2()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android 相机 相册</p>
+				<p class="articleTime">2023-05-16 11:07:04</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="to3()">
+			<img class="articleImg" src="./java_icon.jpg"/>
+			<div class="articleContent">
+				<p class="articleTitle">简单的二叉树算法</p>
+				<p class="articleTime">2023-05-12 10:05:20</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="to4()">
+			<img class="articleImg" src="./chatgpt_icon.jpg"/>
+			<div class="articleContent">
+				<p class="articleTitle">ChatGPT 对话式,大型语言模型</p>
+				<p class="articleTime">2023-05-17 10:44:38</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="to5()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">ML Kit 通过图片识别文字</p>
+				<p class="articleTime">2022-11-29 17:15:08</p>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="article" onclick="to6()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android 自动化操作，辅助功能无障碍，在其他应用的上层显示</p>
+				<p class="articleTime">2023-04-06 13:34:32</p>
+			</div>
+		</div>
+			<div class="divider"></div>
+		<div class="article" onclick="to7()">
+			<img class="articleImg" src="./android_icon.png"/>
+			<div class="articleContent">
+				<p class="articleTitle">Android 小组件 小部件</p>
+				<p class="articleTime">2022-07-26 14:45:36</p>
+			</div>
+		</div>
     </div>
 
 </section>
