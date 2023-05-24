@@ -113,6 +113,15 @@
 		height:1px;
 		
 	}
+    a{
+       text-decoration:none;
+    }
+    a:hover{
+     color:red;
+    }
+
+
+
 
     </style>
     <script>
@@ -210,7 +219,7 @@
 
         var html='';
         for(var i=0;i<arr.length;i++){
-           html+='<div class="article" onclick="toDetail('+i+')"> <img class="articleImg" src='+arr[i].srcPath+'></img> <div class="articleContent"> <p class="articleTitle">'+arr[i].titleName+'</p> <p class="articleTime">'+arr[i].createTime+'</p> </div> </div>';
+           html+='<div class="article" onclick="toDetail('+i+')"> <img class="articleImg" src='+arr[i].srcPath+'></img> <div class="articleContent"> <a class="articleTitle" href='+arr[i].hrefUrl+'>'+arr[i].titleName+'</a> <p class="articleTime">'+arr[i].createTime+'</p> </div> </div>';
         };
         document.getElementById('contentdiv').innerHTML = html;
 
