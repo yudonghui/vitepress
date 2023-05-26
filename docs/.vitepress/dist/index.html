@@ -46,11 +46,11 @@
       color: salmon;
     }
 	
-    /* 侧边 */
+    /* 侧边 background: #B3B3FF; */
     .sideBar{
       width: 300px;
       height: 100%;
-      background: #B3B3FF;
+      background: #EAEAEA;
     }
     .sideBar > .personalInfo,.awards{
       padding-left: 20px;
@@ -80,7 +80,6 @@
     .content{
 	  width:100%;
       position: absolute;
-	  background:#ffffff;
       top: 60px;
       left: 320px;
     }
@@ -92,6 +91,7 @@
 	}
     .article{
 		display:flex;
+		background:white;
 	}
 	.articleContent{
 	  margin-left:10px;
@@ -123,6 +123,8 @@
 
 
 
+
+
     </style>
     <script>
 
@@ -145,14 +147,20 @@
 <section>
     <!-- SideBar -->
     <div class="sideBar">
-        <img class="twoCode" src="./aiassiantant.png"/>
-        <h4 style="margin-left:20px;padding-top:10px"><a
-                href="https://iaoqbthyohbschdxnvya.supabase.co/storage/v1/object/public/userapk/coupons.apk">下载链接</a>
-        </h4>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <div style="display:flex">
+            <img class="twoCode" src="./aiassiantant.png"/>
+
+            <img class="twoCode" src="./tool.png"/>
+        </div>
+        <div style="display:flex">
+            <h4 style="margin-left:20px;padding-top:10px"><a
+                    href="https://iaoqbthyohbschdxnvya.supabase.co/storage/v1/object/public/userapk/coupons.apk">下载链接</a>
+            </h4>
+            <h4 style="margin-left:67px;padding-top:10px"><a
+                    href="https://iaoqbthyohbschdxnvya.supabase.co/storage/v1/object/public/userapk/gence.apk">下载链接</a>
+            </h4>
+        </div>
+
         <div class="personalInfo">
             <h4>ChatGPT是一种基于人工智能技术的聊天机器人，它可以模拟人类的对话方式，与用户进行交互。ChatGPT的功能和优势非常多，下面将详细介绍。</h4>
 
@@ -219,9 +227,11 @@
 
         var html='';
         for(var i=0;i<arr.length;i++){
-           html+='<div class="article" onclick="toDetail('+i+')"> <img class="articleImg" src='+arr[i].srcPath+'></img> <div class="articleContent"> <a class="articleTitle" href='+arr[i].hrefUrl+'>'+arr[i].titleName+'</a> <p class="articleTime">'+arr[i].createTime+'</p> </div> </div>';
+           html+='<div class="article" onclick="toDetail('+i+')"> <img class="articleImg" src='+arr[i].srcPath+'></img> <div class="articleContent"> <a class="articleTitle" href='+arr[i].hrefUrl+'>'+arr[i].titleName+'</a> <p class="articleTime">'+arr[i].createTime+'</p> </div> </div><div class="divider"></div>';
         };
         document.getElementById('contentdiv').innerHTML = html;
+
+
 
 </script>
 </html>
