@@ -125,6 +125,7 @@
 
 
 
+
     </style>
     <script>
 
@@ -201,6 +202,8 @@
 </body>
 <script>
    var arr = [
+            {titleName:'Git cherry-pick命令详解',createTime:'2023-05-29 14:59:35',srcPath:'./git_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130928222'},
+            {titleName:'Android 加载gif图，Glide',createTime:'2023-05-26 17:02:23',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130890506'},
             {titleName:'Android 自定义可拖动悬浮按钮',createTime:'2023-05-24 11:00:29',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130842770'},
             {titleName:'LiveData真的会被Flow替代吗？',createTime:'2023-05-24 09:57:34',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130840820'},
             {titleName:'Android 自动、拨打电话、拨号',createTime:'2023-05-18 14:46:12',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130746822'},
@@ -215,7 +218,7 @@
             {titleName:'简单的Java线程池的实现',createTime:'2023-05-16 10:25:56',srcPath:'./java_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130699938'},
             {titleName:'Android EditView不换行的原因',createTime:'2023-05-16 11:04:58',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130646451'},
             {titleName:'Android 相机 相册',createTime:'2023-05-16 11:07:04',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130636515'},
-            {titleName:'简单的二叉树算法',createTime:'2023-05-12 10:05:20',srcPath:'./java_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130635743'},
+            {titleName:'Java 二叉树 红黑树算法',createTime:'2023-05-12 10:05:20',srcPath:'./java_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130635743'},
             {titleName:'ChatGPT 对话式,大型语言模型',createTime:'2023-05-17 10:44:38',srcPath:'./chatgpt_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/129010790'},
             {titleName:'ML Kit 通过图片识别文字',createTime:'2022-11-29 17:15:08',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/128101271'},
             {titleName:'Android 自动化操作，辅助功能无障碍，在其他应用的上层显示',createTime:'2023-04-06 13:34:32',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/127067421'},
@@ -230,6 +233,7 @@
            html+='<div class="article" onclick="toDetail('+i+')"> <img class="articleImg" src='+arr[i].srcPath+'></img> <div class="articleContent"> <a class="articleTitle" href='+arr[i].hrefUrl+'>'+arr[i].titleName+'</a> <p class="articleTime">'+arr[i].createTime+'</p> </div> </div><div class="divider"></div>';
         };
         document.getElementById('contentdiv').innerHTML = html;
+
 
 
 
