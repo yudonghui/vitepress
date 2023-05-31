@@ -80,7 +80,7 @@
     }
     .bannerDiv{
         border:2px black;
-        width:600px;
+        width:800px;
         height:300px;
         margin:auto;
         text-align:center;
@@ -101,7 +101,7 @@
 <main>
     <section class="banner">
         <div class="bannerDiv" onclick="bannerClick()">
-            <img id="lbt" src="./imgs/banner2.png" width="100%" height="100%"/>
+            <img id="lbt" src="./imgs/banner1.png" width="100%" height="100%"/>
         </div>
     </section>
     <section>
@@ -140,9 +140,11 @@
        setInterval("changeImg()",3000);
     }
     var listBanner = [
-            {titleName:'京东20周年庆 预售火爆开启	预售全场免定金<br/>京东20周年庆 预售火爆开启	预售全场免定金',srcPath:'./imgs/banner1.png',articleUrl:'https://u.jd.com/OQmMunF'},
-            {titleName:'美菱618狂欢节 以旧换新至高省550元',srcPath:'./imgs/banner2.png',articleUrl:'https://u.jd.com/OQhJ0K4'},
-            {titleName:'美妆护肤618狂欢购 美妆正品不止买1赠1',srcPath:'./imgs/banner3.jpg',articleUrl:'https://u.jd.com/Ouh7qsZ'},
+            {time:'05:31',titleName:'京东20周年庆 预售火爆开启	预售全场免定金<br/>京东20周年庆 预售火爆开启	预售全场免定金',srcPath:'./imgs/banner1.png',articleUrl:'https://u.jd.com/OQmMunF'},
+            {time:'06:05',titleName:'美菱618狂欢节 以旧换新至高省550元',srcPath:'./imgs/banner2.png',articleUrl:'https://u.jd.com/OQhJ0K4'},
+            {time:'06:05',titleName:'美妆护肤618狂欢购 美妆正品不止买1赠1',srcPath:'./imgs/banner3.png',articleUrl:'https://u.jd.com/aqLufBy'},
+            {time:'06:05',titleName:'618家乡酒节 好酒8折抢',srcPath:'./imgs/banner4.png',articleUrl:'https://u.jd.com/azLD4Hx'},
+            {time:'06:05',titleName:'京东国际618盛典 进口好物 低至9.9元',srcPath:'./imgs/banner5.png',articleUrl:'https://u.jd.com/asLBQgZ'},
     ];
     var i=0;
     var total=listBanner.length;
@@ -155,7 +157,12 @@
         }
     }
     function bannerClick(){
-        window.location.href = listBanner[i].articleUrl;
+        if(i>0){
+            window.location.href = listBanner[i-1].articleUrl;
+        }else{
+            window.location.href = listBanner[i].articleUrl;
+        }
+
     }
 
 
