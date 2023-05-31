@@ -19,9 +19,10 @@
 	  width: 130px;
       height: 130px;
 	}
-     .article{
+    .article{
 		display:flex;
 		background:white;
+		align-items: center;
 	}
 	.articleContent{
 	  margin-left:10px;
@@ -87,13 +88,14 @@
         </div>
     </section>
     <section>
-        <h2>家电</h2>
+        <h3>家电</h3>
         <div id="contentJiaDian"></div>
-
+        <h3>美妆护肤</h3>
+        <div id="contentMeizhuang"></div>
     </section>
 </main>
 <footer>
-    <p>版权所有 © 2023 yudonghui</p>
+    <p style="">版权所有 © 2023 yudonghui</p>
 </footer>
 </body>
 </html>
@@ -107,7 +109,7 @@
     var listBanner = [
             {titleName:'京东20周年庆 预售火爆开启	预售全场免定金<br/>京东20周年庆 预售火爆开启	预售全场免定金',srcPath:'./imgs/banner1.png',articleUrl:'https://u.jd.com/OQmMunF'},
             {titleName:'美菱618狂欢节 以旧换新至高省550元',srcPath:'./imgs/banner2.png',articleUrl:'https://u.jd.com/OQhJ0K4'},
-            {titleName:'美妆护肤618狂欢购 美妆正品不止买1赠1',srcPath:'./imgs/banner3.png',articleUrl:'https://u.jd.com/Ouh7qsZ'},
+            {titleName:'美妆护肤618狂欢购 美妆正品不止买1赠1',srcPath:'./imgs/banner3.jpg',articleUrl:'https://u.jd.com/Ouh7qsZ'},
     ];
     var i=0;
     var total=listBanner.length;
@@ -139,6 +141,20 @@
      html+='<div class="article"><img class="articleImg" src='+listJiadian[i].srcPath+'></img><div class="articleContent"><div class="articleTitle">'+listJiadian[i].titleName+'</div><div class="articlePrice">'+listJiadian[i].articlePrice+'</div><a class="articleCoupon" href='+listJiadian[i].articleCoupon+'>领券抢购: '+listJiadian[i].articleCoupon+'</a><a class="articlePacket">领红包 更省钱:'+listJiadian[i].articlePacket+' </a></div></div><div class="divider"></div>'
    };
    document.getElementById('contentJiaDian').innerHTML = html;
+
+
+   var listMeizhuang = [
+            {titleName:'【京东】【领券直降】雅诗兰黛小棕瓶特润修护精华液50ml面部精华护肤品化妆品生日礼物送女友',articlePrice:'京东价: ¥935.00 <br/>券后价: ¥865.00',srcPath:'./imgs/meizhuang1.jpg',articleCoupon:'https://u.jd.com/a8tIigR',articlePacket:'https://u.jd.com/ait8Rtj'},
+            {titleName:'【京东】【领券直降】雅诗兰黛樱花原生液精华水200ml面部精华护肤品化妆水补水保湿生日礼物',articlePrice:'京东价: ¥900.00 <br/>券后价: ¥830.00',srcPath:'./imgs/meizhuang2.jpg',articleCoupon:'https://u.jd.com/aqtKfzO',articlePacket:'https://u.jd.com/aut8q8a'},
+            {titleName:'【京东】SK-II神仙水230ml精华液sk2补水保湿skii护肤品套装化妆品生日礼物女',articlePrice:'京东价: ¥1690.00',srcPath:'./imgs/meizhuang3.jpg',articleCoupon:'https://u.jd.com/autTVW1',articlePacket:'https://u.jd.com/autZ2YX'},
+            {titleName:'【京东】【领券直降】珀莱雅补水护肤品套装 化妆品水乳套装女护肤套装 护肤礼盒水漾肌密套装',articlePrice:'京东价: ¥269.00<br/>券后价: ¥259.00',srcPath:'./imgs/meizhuang4.jpg',articleCoupon:'https://u.jd.com/aut3l00',articlePacket:'https://u.jd.com/ait2N3s'},
+        ];
+
+   var html='';
+   for(var i=0;i<listMeizhuang.length;i++){
+     html+='<div class="article"><img class="articleImg" src='+listMeizhuang[i].srcPath+'></img><div class="articleContent"><div class="articleTitle">'+listMeizhuang[i].titleName+'</div><div class="articlePrice">'+listMeizhuang[i].articlePrice+'</div><a class="articleCoupon" href='+listMeizhuang[i].articleCoupon+'>领券抢购: '+listMeizhuang[i].articleCoupon+'</a><a class="articlePacket">领红包 更省钱:'+listMeizhuang[i].articlePacket+' </a></div></div><div class="divider"></div>'
+   };
+   document.getElementById('contentMeizhuang').innerHTML = html;
 
 
 
