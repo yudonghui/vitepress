@@ -7,84 +7,236 @@
     <title>618活动</title>
     <link href="./imgs/logo618.jpg" rel="icon" type="image/x-ico"/>
     <style>
-
-    header > div{
-       width:100%;
-       height: 60px;
-       color: #ffffff;
-       text-align:center;
-       font-size:25px;
-    }
-    .articleImg{
-	  width: 130px;
-      height: 130px;
-	}
-	.articleImgBig{
-	  position: absolute;
-	  width: 400px;
-      height: 530px;
-      display:none;
-	}
-	.articleImg:hover ~.articleImgBig{
-	  position: absolute;
-	  width: 400px;
-      height: 530px;
-      display:flex;
-	}
-    .article{
+    /* 小屏幕手机端 */
+	@media (min-width: 0px) and (max-width:768px) {
+        .bannerDiv{
+            border:2px black;
+            width:500px;
+            height:187px;
+            margin:auto;
+            text-align:center;
+        }
+        .articleImg{
+	        width: 80px;
+            height: 80px;
+	    }
+        .articleImgBig{
+          position: absolute;
+          margin-left:90px;
+          width: 200px;
+          height: 264px;
+          display:none;
+        }
+        .articleImg:hover ~.articleImgBig{
+          position: absolute;
+         margin-left:90px;
+          width: 200px;
+          height: 264px;
+          display:flex;
+        }
+        .article{
 		display:flex;
 		background:white;
 		align-items: center;
+        }
+        .articleContent{
+          margin-left:10px;
+        }
+        .articleContent a{
+            display: block;
+        }
+        .articleTitle{
+            color: #000000;
+            margin-top:10px;
+            font-size:16px;
+        }
+        .articlePrice{
+            color: #000000;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:14px;
+        }
+        .articleCoupon{
+            color:#A5A5A5;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:14px;
+        }
+        .articlePacket{
+            color:#A5A5A5;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:14px;
+        }
+        .divider{
+            background-color:#EAEAEA;
+            width:100%;
+            height:1px;
+            margin-top:5px;
+            margin-bottom:5px;
+        }
+        a{
+           text-decoration:none;
+        }
+        a:hover{
+            color:red;
+        }
 	}
-	.articleContent{
-	  margin-left:10px;
+	/* 中等屏幕（桌面显示器，大于等于 992px） */
+	@media (min-width: 768px) and (max-width:992px) {
+        .bannerDiv{
+            border:2px black;
+            width:800px;
+            height:300px;
+            margin:auto;
+            text-align:center;
+        }
+        .articleImg{
+	        width: 100px;
+            height: 100px;
+	    }
+        .articleImgBig{
+          position: absolute;
+          margin-left:110px;
+          width: 300px;
+          height: 400px;
+          display:none;
+        }
+        .articleImg:hover ~.articleImgBig{
+          position: absolute;
+          margin-left:110px;
+          width: 300px;
+          height: 400px;
+          display:flex;
+        }
+        .article{
+		display:flex;
+		background:white;
+		align-items: center;
+        }
+        .articleContent{
+          margin-left:10px;
+        }
+        .articleContent a{
+            display: block;
+        }
+        .articleTitle{
+            color: #000000;
+            margin-top:10px;
+            font-size:18px;
+        }
+        .articlePrice{
+            color: #000000;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:16px;
+        }
+        .articleCoupon{
+            color:#A5A5A5;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:14px;
+        }
+        .articlePacket{
+            color:#A5A5A5;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:14px;
+        }
+        .divider{
+            background-color:#EAEAEA;
+            width:100%;
+            height:1px;
+            margin-top:5px;
+            margin-bottom:5px;
+        }
+        a{
+           text-decoration:none;
+        }
+        a:hover{
+            color:red;
+        }
 	}
-    .articleContent a{
-        display: block;
-    }
-    .articleTitle{
-		color: #000000;
-		margin-top:10px;
-		font-size:18px;
+	 /* 大屏幕（大桌面显示器，大于等于 1200px） */
+	@media (min-width: 992px) {
+        .bannerDiv{
+            border:2px black;
+            width:800px;
+            height:300px;
+            margin:auto;
+            text-align:center;
+        }
+        .articleImg{
+	        width: 130px;
+            height: 130px;
+	    }
+        .articleImgBig{
+          position: absolute;
+          margin-left:140px;
+          width: 400px;
+          height: 530px;
+          display:none;
+        }
+        .articleImg:hover ~.articleImgBig{
+          position: absolute;
+          margin-left:140px;
+          width: 400px;
+          height: 530px;
+          display:flex;
+        }
+        .article{
+		display:flex;
+		background:white;
+		align-items: center;
+        }
+        .articleContent{
+          margin-left:10px;
+        }
+        .articleContent a{
+            display: block;
+        }
+        .articleTitle{
+            color: #000000;
+            margin-top:10px;
+            font-size:18px;
+        }
+        .articlePrice{
+            color: #000000;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:16px;
+        }
+        .articleCoupon{
+            color:#A5A5A5;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:14px;
+        }
+        .articlePacket{
+            color:#A5A5A5;
+            margin-top:5px;
+            margin-left:5px;
+            font-size:14px;
+        }
+        .divider{
+            background-color:#EAEAEA;
+            width:100%;
+            height:1px;
+            margin-top:5px;
+            margin-bottom:5px;
+        }
+        a{
+           text-decoration:none;
+        }
+        a:hover{
+            color:red;
+        }
 	}
-	.articlePrice{
-		color: #000000;
-		margin-top:5px;
-		margin-left:5px;
-		font-size:16px;
-	}
-	.articleCoupon{
-	    color:#A5A5A5;
-		margin-top:5px;
-		margin-left:5px;
-		font-size:14px;
-	}
-	.articlePacket{
-		color:#A5A5A5;
-		margin-top:5px;
-		margin-left:5px;
-		font-size:14px;
-	}
-	.divider{
-		background-color:#EAEAEA;
-		width:100%;
-		height:1px;
-        margin-top:5px;
-        margin-bottom:5px;
-	}
-	a{
-       text-decoration:none;
-    }
-    a:hover{
-        color:red;
-    }
-    .bannerDiv{
-        border:2px black;
-        width:800px;
-        height:300px;
-        margin:auto;
-        text-align:center;
-    }
+
+
+
+
+
 
 
 
@@ -105,22 +257,22 @@
         </div>
     </section>
     <section>
-       <!-- <div class="article" onclick="toDetail(0)">
-            <img class="articleImg" src="./imgs/fengshan.jpg"/>
-            <img class="articleImgBig" src="./imgs/fengshan.jpg"/>
+        <!-- <div class="article" onclick="toDetail(0)">
+             <img class="articleImg" src="./imgs/fengshan.jpg"/>
+             <img class="articleImgBig" src="./imgs/fengshan.jpg"/>
 
-            <div class="articleContent">
-                <div class="articleTitle">
-                    【京东】【领券直降】艾美特（AIRMATE）“海鸥”京东小家智能空气循环扇电风扇家用20档直流变频遥控360度摆头落地式风扇
-                    FA18-AD61
-                </div>
-                <div class="articlePrice">京东价: ¥799.00 <br/>
-                    券后价: ¥729.00
-                </div>
-                <a class="articleCoupon">领券抢购: https://u.jd.com/Obkc16h</a>
-                <a class="articlePacket">领红包 更省钱: https://u.jd.com/OskjOgB</a>
-            </div>
-        </div>-->
+             <div class="articleContent">
+                 <div class="articleTitle">
+                     【京东】【领券直降】艾美特（AIRMATE）“海鸥”京东小家智能空气循环扇电风扇家用20档直流变频遥控360度摆头落地式风扇
+                     FA18-AD61
+                 </div>
+                 <div class="articlePrice">京东价: ¥799.00 <br/>
+                     券后价: ¥729.00
+                 </div>
+                 <a class="articleCoupon">领券抢购: https://u.jd.com/Obkc16h</a>
+                 <a class="articlePacket">领红包 更省钱: https://u.jd.com/OskjOgB</a>
+             </div>
+         </div>-->
         <h3>家电</h3>
         <div id="contentJiaDian"></div>
         <h3>美妆护肤</h3>
@@ -173,6 +325,10 @@
             {titleName:'【京东】海尔（Haier）216升三开门多门小型迷你家用电冰箱宿舍租房小户型低音节能不占地中门软冷冻以旧换新BCD-216STPT',articlePrice:'京东价: ¥1125.00',srcPath:'./imgs/bingxiang1.jpg',srcPathBig:'./imgs/bingxiang1big.jpg',articleCoupon:'https://u.jd.com/O8hog0e',articlePacket:'https://u.jd.com/OQhFkIB'},
             {titleName:'【京东】【领券直降】小天鹅（LittleSwan）滚筒洗衣机全自动 洗烘一体机 深层除菌螨 蒸汽速烘 10公斤大容量 以旧换新 TD100PURE',articlePrice:'预售价: ¥2199.00 <br/>券后预售价: ¥2049.00',srcPath:'./imgs/xiyiji1.jpg',srcPathBig:'./imgs/xiyiji1big.jpg',articleCoupon:'https://u.jd.com/astC1yH',articlePacket:'https://u.jd.com/Ozh4Spg'},
             {titleName:'【京东】【领券直降】小天鹅（LittleSwan）滚筒洗衣机全自动 超薄全嵌-纤彩 小乌梅【TG100RVIC】1.1洗净比 超微净泡 大筒径10公斤',articlePrice:'预售价:  ¥3799.00 <br/>券后预售价: ¥3599.00',srcPath:'./imgs/xiyiji2.jpg',srcPathBig:'./imgs/xiyiji2big.jpg',articleCoupon:'https://u.jd.com/aqtIOSt',articlePacket:'https://u.jd.com/Ozhmhqe'},
+            {titleName:'【京东】美的（Midea）空调 1.5匹 酷省电 新一级能效 变频冷暖 自清洁 壁挂式空调挂机 智能家电 KFR-35GW/N8KS1-1',articlePrice:'预售价:  ¥2549.00',srcPath:'./imgs/kongtiao1.jpg',srcPathBig:'./imgs/kongtiao1big.jpg',articleCoupon:' https://u.jd.com/auLhh1n',articlePacket:'https://u.jd.com/asCCFkO'},
+            {titleName:'【京东】【领券直降】奥克斯（AUX） 空调 1.5匹 新一级能效 空调挂机 变频冷暖 卧室挂式独立除湿KFR-35GW/BpR3AQE1(B1)家用省电',articlePrice:'预售价: ¥2099.00 <br/>券后预售价: ¥2069.00',srcPath:'./imgs/kongtiao2.jpg',srcPathBig:'./imgs/kongtiao2big.jpg',articleCoupon:'https://u.jd.com/auCdqLf',articlePacket:'https://u.jd.com/aiCMKwT'},
+            {titleName:'【京东】【领券直降】格力（GREE）3匹 京致 冷暖分送 衡温空间 自清洁 智能 客厅空调立式空调柜机KFR-72LW/NhAj1BGj',articlePrice:'预售价: ¥9999.00 <br/>券后预售价: ¥8499.00',srcPath:'./imgs/kongtiao3.jpg',srcPathBig:'./imgs/kongtiao3big.jpg',articleCoupon:'https://u.jd.com/aqLeZl9',articlePacket:'https://u.jd.com/abCs68o'},
+
         ];
 
    var html='';
@@ -187,6 +343,8 @@
             {titleName:'【京东】【领券直降】雅诗兰黛樱花原生液精华水200ml面部精华护肤品化妆水补水保湿生日礼物',articlePrice:'京东价: ¥900.00 <br/>券后价: ¥830.00',srcPath:'./imgs/meizhuang2.jpg',srcPathBig:'./imgs/meizhuang2big.jpg',articleCoupon:'https://u.jd.com/aqtKfzO',articlePacket:'https://u.jd.com/aut8q8a'},
             {titleName:'【京东】SK-II神仙水230ml精华液sk2补水保湿skii护肤品套装化妆品生日礼物女',articlePrice:'京东价: ¥1690.00',srcPath:'./imgs/meizhuang3.jpg',srcPathBig:'./imgs/meizhuang3big.jpg',articleCoupon:'https://u.jd.com/autTVW1',articlePacket:'https://u.jd.com/autZ2YX'},
             {titleName:'【京东】【领券直降】珀莱雅补水护肤品套装 化妆品水乳套装女护肤套装 护肤礼盒水漾肌密套装',articlePrice:'京东价: ¥269.00<br/>券后价: ¥259.00',srcPath:'./imgs/meizhuang4.jpg',srcPathBig:'./imgs/meizhuang4big.jpg',articleCoupon:'https://u.jd.com/aut3l00',articlePacket:'https://u.jd.com/ait2N3s'},
+            {titleName:'【京东】【领券直降】珀莱雅紧致肌密洁水乳套装 补水护肤品套装化妆品套装护肤套装 护肤礼盒',articlePrice:'京东价: ¥279.00<br/>券后价: ¥269.00',srcPath:'./imgs/meizhuang5.jpg',srcPathBig:'./imgs/meizhuang5big.jpg',articleCoupon:'https://u.jd.com/auLUHga',articlePacket:'https://u.jd.com/auLZkkD'},
+            {titleName:'【京东】SK-II小灯泡美白精华液30ml(新一代)sk2美白淡斑skii护肤品套装化妆品',articlePrice:'京东价: ¥1230.00',srcPath:'./imgs/meizhuang6.jpg',srcPathBig:'./imgs/meizhuang6big.jpg',articleCoupon:'https://u.jd.com/asCi9FZ',articlePacket:'https://u.jd.com/asCuU2n'},
         ];
 
    var html='';
@@ -194,24 +352,6 @@
      html+='<div class="article"><img class="articleImg" src='+listMeizhuang[i].srcPath+'></img><img class="articleImgBig" src='+listMeizhuang[i].srcPathBig+'></img><div class="articleContent"><div class="articleTitle">'+listMeizhuang[i].titleName+'</div><div class="articlePrice">'+listMeizhuang[i].articlePrice+'</div><a class="articleCoupon" href='+listMeizhuang[i].articleCoupon+'>领券抢购: '+listMeizhuang[i].articleCoupon+'</a><a class="articlePacket">领红包 更省钱:'+listMeizhuang[i].articlePacket+' </a></div></div><div class="divider"></div>'
    };
    document.getElementById('contentMeizhuang').innerHTML = html;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
