@@ -1,165 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>门户网站首页</title>
+    <meta charset="UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>618活动</title>
+    <link href="./imgs/logo618.jpg" rel="icon" type="image/x-ico"/>
+    <style>
+
+    header > div{
+       width:100%;
+       height: 60px;
+       color: #ffffff;
+       text-align:center;
+       font-size:25px;
+    }
+    .articleImg{
+	  width: 130px;
+      height: 130px;
+	}
+     .article{
+		display:flex;
+		background:white;
+	}
+	.articleContent{
+	  margin-left:10px;
+	}
+    .articleContent a{
+        display: block;
+    }
+    .articleTitle{
+		color: #000000;
+		margin-top:10px;
+		font-size:18px;
+	}
+	.articlePrice{
+		color: #000000;
+		margin-top:5px;
+		margin-left:5px;
+		font-size:16px;
+	}
+	.articleCoupon{
+	    color:#A5A5A5;
+		margin-top:5px;
+		margin-left:5px;
+		font-size:14px;
+	}
+	.articlePacket{
+		color:#A5A5A5;
+		margin-top:5px;
+		margin-left:5px;
+		font-size:14px;
+	}
+	.divider{
+		background-color:#EAEAEA;
+		width:100%;
+		height:1px;
+        margin-top:5px;
+	}
+	a{
+       text-decoration:none;
+    }
+    a:hover{
+        color:red;
+    }
+    .bannerDiv{
+        border:2px black;
+        width:600px;
+        height:300px;
+        margin:auto;
+        text-align:center;
+    }
+
+
+
+
+
+
+
+
+    </style>
 </head>
-<body>
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="网站logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">新闻</a></li>
-            <li><a href="#">娱乐</a></li>
-            <li><a href="#">体育</a></li>
-            <li><a href="#">科技</a></li>
-            <li><a href="#">财经</a></li>
-            <li><a href="#">更多</a></li>
-        </ul>
-    </nav>
-</header>
+<header></header>
+<body onload="init()">
 <main>
     <section class="banner">
-        <img src="banner.jpg" alt="网站banner">
+        <div class="bannerDiv">
+            <img id="lbt" src="./imgs/logo618.jpg" width="100%" height="100%"/>
+        </div>
     </section>
-    <section class="news">
-        <h2>最新新闻</h2>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="news1.jpg" alt="新闻图片">
-                    <h3>新闻标题</h3>
-                    <p>新闻简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="news2.jpg" alt="新闻图片">
-                    <h3>新闻标题</h3>
-                    <p>新闻简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="news3.jpg" alt="新闻图片">
-                    <h3>新闻标题</h3>
-                    <p>新闻简介</p>
-                </a>
-            </li>
-        </ul>
-    </section>
-    <section class="entertainment">
-        <h2>娱乐资讯</h2>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="entertainment1.jpg" alt="娱乐图片">
-                    <h3>娱乐标题</h3>
-                    <p>娱乐简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="entertainment2.jpg" alt="娱乐图片">
-                    <h3>娱乐标题</h3>
-                    <p>娱乐简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="entertainment3.jpg" alt="娱乐图片">
-                    <h3>娱乐标题</h3>
-                    <p>娱乐简介</p>
-                </a>
-            </li>
-        </ul>
-    </section>
-    <section class="sports">
-        <h2>体育新闻</h2>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="sports1.jpg" alt="体育图片">
-                    <h3>体育标题</h3>
-                    <p>体育简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="sports2.jpg" alt="体育图片">
-                    <h3>体育标题</h3>
-                    <p>体育简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="sports3.jpg" alt="体育图片">
-                    <h3>体育标题</h3>
-                    <p>体育简介</p>
-                </a>
-            </li>
-        </ul>
-    </section>
-    <section class="technology">
-        <h2>科技资讯</h2>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="technology1.jpg" alt="科技图片">
-                    <h3>科技标题</h3>
-                    <p>科技简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="technology2.jpg" alt="科技图片">
-                    <h3>科技标题</h3>
-                    <p>科技简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="technology3.jpg" alt="科技图片">
-                    <h3>科技标题</h3>
-                    <p>科技简介</p>
-                </a>
-            </li>
-        </ul>
-    </section>
-    <section class="finance">
-        <h2>财经新闻</h2>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="finance1.jpg" alt="财经图片">
-                    <h3>财经标题</h3>
-                    <p>财经简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="finance2.jpg" alt="财经图片">
-                    <h3>财经标题</h3>
-                    <p>财经简介</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="finance3.jpg" alt="财经图片">
-                    <h3>财经标题</h3>
-                    <p>财经简介</p>
-                </a>
-            </li>
-        </ul>
+    <section>
+        <h2>家电</h2>
+        <div id="contentJiaDian"></div>
+
     </section>
 </main>
 <footer>
-    <p>版权所有 © 2023 门户网站</p>
+    <p>版权所有 © 2023 yudonghui</p>
 </footer>
 </body>
+<script>
+
+
+    function init(){
+       setInterval("changeImg()",3000);
+    }
+    var i=0;
+    function changeImg () {
+        i++;
+        document.getElementById("lbt").src="./imgs/"+i+".jpg";
+        if(i==4){
+            i=0;
+        }
+    }
+
+
+
+   var listJiadian = [
+            {titleName:'【京东】【领券直降】艾美特（AIRMATE）“海鸥”京东小家智能空气循环扇电风扇家用20档直流变频遥控360度摆头落地式风扇FA18-AD61',articlePrice:'京东价: ¥799.00 <br/>券后价: ¥299.00',srcPath:'./imgs/fengshan.jpg',articleCoupon:'https://u.jd.com/Obkc16h',articlePacket:'https://u.jd.com/OskjOgB'}
+
+        ];
+
+        var html='';
+        for(var i=0;i<listJiadian.length;i++){
+        html+='<div class="article"><img class="articleImg" src='+listJiadian[i].srcPath+'></img><div class="articleContent"><div class="articleTitle">'+listJiadian[i].titleName+'</div><div class="articlePrice">'+listJiadian[i].articlePrice+'</div><a class="articleCoupon" href='+listJiadian[i].articleCoupon+'>领券抢购: '+listJiadian[i].articleCoupon+'</a><a class="articlePacket">领红包 更省钱:'+listJiadian[i].articlePacket+' </a></div></div><div class="divider"></div>'
+        };
+        document.getElementById('contentJiaDian').innerHTML = html;
+
+
+
+
+
+
+
+
+
+
+</script>
 </html>
