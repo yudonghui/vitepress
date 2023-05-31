@@ -57,6 +57,7 @@
 		width:100%;
 		height:1px;
         margin-top:5px;
+        margin-bottom:5px;
 	}
 	a{
        text-decoration:none;
@@ -75,18 +76,14 @@
 
 
 
-
-
-
-
     </style>
 </head>
 <header></header>
 <body onload="init()">
 <main>
     <section class="banner">
-        <div class="bannerDiv">
-            <img id="lbt" src="./imgs/logo618.jpg" width="100%" height="100%"/>
+        <div class="bannerDiv" onclick="bannerClick()">
+            <img id="lbt" src="./imgs/banner2.png" width="100%" height="100%"/>
         </div>
     </section>
     <section>
@@ -99,33 +96,55 @@
     <p>版权所有 © 2023 yudonghui</p>
 </footer>
 </body>
+</html>
+
 <script>
 
 
     function init(){
        setInterval("changeImg()",3000);
     }
+    var listBanner = [
+            {titleName:'京东20周年庆 预售火爆开启	预售全场免定金<br/>京东20周年庆 预售火爆开启	预售全场免定金',srcPath:'./imgs/banner1.png',articleUrl:'https://u.jd.com/OQmMunF'},
+            {titleName:'美菱618狂欢节 以旧换新至高省550元',srcPath:'./imgs/banner2.png',articleUrl:'https://u.jd.com/OQhJ0K4'},
+            {titleName:'美妆护肤618狂欢购 美妆正品不止买1赠1',srcPath:'./imgs/banner3.png',articleUrl:'https://u.jd.com/Ouh7qsZ'},
+    ];
     var i=0;
+    var total=listBanner.length;
     function changeImg () {
-        i++;
-        document.getElementById("lbt").src="./imgs/"+i+".jpg";
-        if(i==4){
+        if(i>=total){
             i=0;
+        }else{
+            document.getElementById("lbt").src=listBanner[i].srcPath;
+            i++;
         }
+    }
+    function bannerClick(){
+        window.location.href = listBanner[i].articleUrl;
     }
 
 
 
    var listJiadian = [
-            {titleName:'【京东】【领券直降】艾美特（AIRMATE）“海鸥”京东小家智能空气循环扇电风扇家用20档直流变频遥控360度摆头落地式风扇FA18-AD61',articlePrice:'京东价: ¥799.00 <br/>券后价: ¥299.00',srcPath:'./imgs/fengshan.jpg',articleCoupon:'https://u.jd.com/Obkc16h',articlePacket:'https://u.jd.com/OskjOgB'}
+            {titleName:'【京东】【领券直降】艾美特（AIRMATE）“海鸥”京东小家智能空气循环扇电风扇家用20档直流变频遥控360度摆头落地式风扇FA18-AD61',articlePrice:'京东价: ¥799.00 <br/>券后价: ¥299.00',srcPath:'./imgs/fengshan.jpg',articleCoupon:'https://u.jd.com/Obkc16h',articlePacket:'https://u.jd.com/OskjOgB'},
+            {titleName:'【京东】【领券直降】海尔（Haier）冰箱412L法式双开门四开门多门家用一级能效双变频家用超薄嵌入式风冷无霜超大容量家电智能旗舰 412L+母婴专储空间+冷藏三档变温+黑金净化系统',articlePrice:'预售价: ¥3297.90 <br/>券后预售价: ¥2997.90',srcPath:'./imgs/bingxiang2.jpg',articleCoupon:'https://u.jd.com/OuhU5gN',articlePacket:'https://u.jd.com/Ozh5XDj'},
+            {titleName:'【京东】海尔（Haier）216升三开门多门小型迷你家用电冰箱宿舍租房小户型低音节能不占地中门软冷冻以旧换新BCD-216STPT',articlePrice:'京东价: ¥1125.00',srcPath:'./imgs/bingxiang1.jpg',articleCoupon:'https://u.jd.com/O8hog0e',articlePacket:'https://u.jd.com/OQhFkIB'},
+            {titleName:'【京东】【领券直降】小天鹅（LittleSwan）滚筒洗衣机全自动 洗烘一体机 深层除菌螨 蒸汽速烘 10公斤大容量 以旧换新 TD100PURE',articlePrice:'预售价: ¥2199.00 <br/>券后预售价: ¥2049.00',srcPath:'./imgs/xiyiji1.jpg',articleCoupon:'https://u.jd.com/astC1yH',articlePacket:'https://u.jd.com/Ozh4Spg'},
+            {titleName:'【京东】【领券直降】小天鹅（LittleSwan）滚筒洗衣机全自动 超薄全嵌-纤彩 小乌梅【TG100RVIC】1.1洗净比 超微净泡 大筒径10公斤',articlePrice:'预售价:  ¥3799.00 <br/>券后预售价: ¥3599.00',srcPath:'./imgs/xiyiji2.jpg',articleCoupon:'https://u.jd.com/aqtIOSt',articlePacket:'https://u.jd.com/Ozhmhqe'},
 
         ];
 
-        var html='';
-        for(var i=0;i<listJiadian.length;i++){
-        html+='<div class="article"><img class="articleImg" src='+listJiadian[i].srcPath+'></img><div class="articleContent"><div class="articleTitle">'+listJiadian[i].titleName+'</div><div class="articlePrice">'+listJiadian[i].articlePrice+'</div><a class="articleCoupon" href='+listJiadian[i].articleCoupon+'>领券抢购: '+listJiadian[i].articleCoupon+'</a><a class="articlePacket">领红包 更省钱:'+listJiadian[i].articlePacket+' </a></div></div><div class="divider"></div>'
-        };
-        document.getElementById('contentJiaDian').innerHTML = html;
+   var html='';
+   for(var i=0;i<listJiadian.length;i++){
+     html+='<div class="article"><img class="articleImg" src='+listJiadian[i].srcPath+'></img><div class="articleContent"><div class="articleTitle">'+listJiadian[i].titleName+'</div><div class="articlePrice">'+listJiadian[i].articlePrice+'</div><a class="articleCoupon" href='+listJiadian[i].articleCoupon+'>领券抢购: '+listJiadian[i].articleCoupon+'</a><a class="articlePacket">领红包 更省钱:'+listJiadian[i].articlePacket+' </a></div></div><div class="divider"></div>'
+   };
+   document.getElementById('contentJiaDian').innerHTML = html;
+
+
+
+
+
+
 
 
 
@@ -137,4 +156,3 @@
 
 
 </script>
-</html>
