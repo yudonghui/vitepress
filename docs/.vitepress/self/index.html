@@ -183,11 +183,12 @@
           width: 400px;
           height: 530px;
           display:flex;
+          border:1px solid #A5A5A5;
         }
         .article{
-		display:flex;
-		background:white;
-		align-items: center;
+            display:flex;
+            background:white;
+            align-items: center;
         }
         .articleContent{
           margin-left:10px;
@@ -247,6 +248,9 @@
 
 
 
+
+
+
     </style>
 </head>
 <header></header>
@@ -290,7 +294,7 @@
 
 
     function init(){
-       setInterval("changeImg()",3000);
+       setInterval("changeImg()",2000);
     }
     var listBanner = [
             {time:'05:31',titleName:'京东20周年庆 预售火爆开启	预售全场免定金<br/>京东20周年庆 预售火爆开启	预售全场免定金',srcPath:'./imgs/banner1.png',articleUrl:'https://u.jd.com/OQmMunF'},
@@ -298,6 +302,7 @@
             {time:'06:05',titleName:'美妆护肤618狂欢购 美妆正品不止买1赠1',srcPath:'./imgs/banner3.png',articleUrl:'https://u.jd.com/aqLufBy'},
             {time:'06:05',titleName:'618家乡酒节 好酒8折抢',srcPath:'./imgs/banner4.png',articleUrl:'https://u.jd.com/azLD4Hx'},
             {time:'06:05',titleName:'京东国际618盛典 进口好物 低至9.9元',srcPath:'./imgs/banner5.png',articleUrl:'https://u.jd.com/asLBQgZ'},
+            {time:'06:05',titleName:'京东超市618 每满300减50 价保30天',srcPath:'./imgs/banner6.png',articleUrl:'https://u.jd.com/aqGJJLN'},
     ];
     var i=0;
     var total=listBanner.length;
@@ -310,12 +315,11 @@
         }
     }
     function bannerClick(){
-        if(i>0){
+       if(i>0){
             window.location.href = listBanner[i-1].articleUrl;
         }else{
             window.location.href = listBanner[i].articleUrl;
         }
-
     }
 
 
@@ -329,6 +333,11 @@
             {titleName:'【京东】美的（Midea）空调 1.5匹 酷省电 新一级能效 变频冷暖 自清洁 壁挂式空调挂机 智能家电 KFR-35GW/N8KS1-1',articlePrice:'预售价:  ¥2549.00',srcPath:'./imgs/kongtiao1.jpg',srcPathBig:'./imgs/kongtiao1big.jpg',articleCoupon:' https://u.jd.com/auLhh1n',articlePacket:'https://u.jd.com/asCCFkO'},
             {titleName:'【京东】【领券直降】奥克斯（AUX） 空调 1.5匹 新一级能效 空调挂机 变频冷暖 卧室挂式独立除湿KFR-35GW/BpR3AQE1(B1)家用省电',articlePrice:'预售价: ¥2099.00 <br/>券后预售价: ¥2069.00',srcPath:'./imgs/kongtiao2.jpg',srcPathBig:'./imgs/kongtiao2big.jpg',articleCoupon:'https://u.jd.com/auCdqLf',articlePacket:'https://u.jd.com/aiCMKwT'},
             {titleName:'【京东】【领券直降】格力（GREE）3匹 京致 冷暖分送 衡温空间 自清洁 智能 客厅空调立式空调柜机KFR-72LW/NhAj1BGj',articlePrice:'预售价: ¥9999.00 <br/>券后预售价: ¥8499.00',srcPath:'./imgs/kongtiao3.jpg',srcPathBig:'./imgs/kongtiao3big.jpg',articleCoupon:'https://u.jd.com/aqLeZl9',articlePacket:'https://u.jd.com/abCs68o'},
+            {titleName:'【京东】【领券直降】九阳（Joyoung）肖战推荐电饭煲 电饭锅3L 2-6人 大火力 智能预约多功能焖煮防溢家用迷你电饭煲F-30FZ630',articlePrice:'京东价: ¥139.00 <br/>券后价: ¥129.00',srcPath:'./imgs/dianfanbao1.jpg',srcPathBig:'./imgs/dianfanbao1big.jpg',articleCoupon:'https://u.jd.com/aiGX6om',articlePacket:'https://u.jd.com/asG4oY4'},
+            {titleName:'【京东】苏泊尔（SUPOR）电饭煲电饭锅4L蓝钻厚釜内胆3-8人使用可添加记忆功能8大菜单家用智能电饭煲40FC776',articlePrice:'京东价: ¥249.00',srcPath:'./imgs/dianfanbao2.jpg',srcPathBig:'./imgs/dianfanbao2big.jpg',articleCoupon:'https://u.jd.com/azG72rH',articlePacket:'https://u.jd.com/aqGXNN3'},
+            {titleName:'【京东】苏泊尔（SUPOR）电饭煲Pro电饭锅4L远红外系列 IH电磁加热 远红外穿透本釜内胆 家用智能多功能电饭煲SF40HC786',articlePrice:'京东价: ¥769.00',srcPath:'./imgs/dianfanbao3.jpg',srcPathBig:'./imgs/dianfanbao3big.jpg',articleCoupon:'https://u.jd.com/auGolcu',articlePacket:'https://u.jd.com/auGm059'},
+            {titleName:'【京东】【领券直降】美的（Midea）纤V系列 IH智能电饭煲Pro电饭锅家用4L大容量一级能效预约精铁釜蒸米饭锅FB40S701（3-8人）',articlePrice:'京东价: ¥550.00 <br/>券后价:  ¥520.00',srcPath:'./imgs/dianfanbao4.jpg',srcPathBig:'./imgs/dianfanbao4big.jpg',articleCoupon:'https://u.jd.com/asG49qv',articlePacket:'https://u.jd.com/a8GFEW8'},
+
 
         ];
 
@@ -353,6 +362,9 @@
      html+='<div class="article"><img class="articleImg" src='+listMeizhuang[i].srcPath+'></img><img class="articleImgBig" src='+listMeizhuang[i].srcPathBig+'></img><div class="articleContent"><div class="articleTitle">'+listMeizhuang[i].titleName+'</div><div class="articlePrice">'+listMeizhuang[i].articlePrice+'</div><a class="articleCoupon" href='+listMeizhuang[i].articleCoupon+'>领券抢购: '+listMeizhuang[i].articleCoupon+'</a><a class="articlePacket" href='+listMeizhuang[i].articlePacket+'>领红包 更省钱:'+listMeizhuang[i].articlePacket+' </a></div></div><div class="divider"></div>'
    };
    document.getElementById('contentMeizhuang').innerHTML = html;
+
+
+
 
 
 
