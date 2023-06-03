@@ -307,18 +307,9 @@
 <body onload="init()">
 <main>
     <nav>
-        <a href="#">家电</a>
-        <a href="#">手机/电脑</a>
-        <a href="#">美妆/护肤</a>
-        <a href="#">新闻</a>
-        <a href="#">产品</a>
-        <a href="#">关于我们</a>
-        <a href="#">联系我们</a>
-        <a href="#">加入我们</a>
-        <a href="#">反馈</a>
-        <a href="#">帮助</a>
-        <a href="#">设置</a>
-        <a href="#">退出</a>
+        <a href="#" onclick="tableClick('家电')">家电</a>
+        <a href="#" onclick="tableClick('手机/电脑')">手机/电脑</a>
+        <a href="#" onclick="tableClick('美妆/护肤')">美妆/护肤</a>
     </nav>
     <section class="banner">
         <div class="bannerDiv" onclick="bannerClick()">
@@ -343,12 +334,7 @@
                  <a class="articlePacket">领红包 更省钱: https://u.jd.com/OskjOgB</a>
              </div>
          </div>-->
-        <h3>家电</h3>
-        <div id="contentJiaDian"></div>
-        <h3>手机/电脑</h3>
-        <div id="contentPhone"></div>
-        <h3>美妆/护肤</h3>
-        <div id="contentMeizhuang"></div>
+        <div id="contentTest"></div>
     </section>
 </main>
 <footer>
@@ -361,9 +347,10 @@
 <script>
     function init() {
         setInterval("changeImg()", 2000);
+        tableClick("家电")
     }
 
-    var listBanner = [
+    let listBanner = [
         {
             time: '05:31',
             titleName: '京东20周年庆 预售火爆开启	预售全场免定金<br/>京东20周年庆 预售火爆开启	预售全场免定金',
@@ -401,8 +388,8 @@
             articleUrl: 'https://u.jd.com/aqGJJLN'
         },
     ];
-    var i = 0;
-    var total = listBanner.length;
+    let i = 0;
+    let total = listBanner.length;
 
     function changeImg() {
         if (i >= total) {
@@ -422,7 +409,7 @@
     }
 
 
-    var listJiadian = [
+    let listJiadian = [
         {
             titleName: '【京东】【领券直降】艾美特（AIRMATE）“海鸥”京东小家智能空气循环扇电风扇家用20档直流变频遥控360度摆头落地式风扇FA18-AD61',
             articlePrice: '京东价: ¥799.00 <br/>券后价: ¥299.00',
@@ -435,7 +422,7 @@
             titleName: '【京东】【领券直降】海尔（Haier）冰箱412L法式双开门四开门多门家用一级能效双变频家用超薄嵌入式风冷无霜超大容量家电智能旗舰 412L+母婴专储空间+冷藏三档变温+黑金净化系统',
             articlePrice: '预售价: ¥3297.90 <br/>券后预售价: ¥2997.90',
             srcPath: './imgs/bingxiang2.jpg',
-            srcPathBig: './imgs/bingxiang2big.jpg',
+            srcPathBig: './imgs/ringing2big.jpg',
             articleCoupon: 'https://u.jd.com/OuhU5gN',
             articlePacket: 'https://u.jd.com/Ozh5XDj'
         },
@@ -522,14 +509,8 @@
 
     ];
 
-    var html = '';
-    for (var i = 0; i < listJiadian.length; i++) {
-        html += '<div class="article"><img class="articleImg" src=' + listJiadian[i].srcPath + '></img><img class="articleImgBig" src=' + listJiadian[i].srcPathBig + '></img><div class="articleContent" onclick="toSkip(\'' + listJiadian[i].articleCoupon + '\')"><div class="articleTitle">' + listJiadian[i].titleName + '</div><div class="articlePrice">' + listJiadian[i].articlePrice + '</div><a class="articleCoupon" href=' + listJiadian[i].articleCoupon + '>领券抢购: ' + listJiadian[i].articleCoupon + '</a><a class="articlePacket" href=' + listJiadian[i].articlePacket + '>领红包 更省钱:' + listJiadian[i].articlePacket + ' </a></div></div><div class="divider"></div>'
-    }
-    ;
-    document.getElementById('contentJiaDian').innerHTML = html;
 
-    var listPhone = [
+    const listPhone = [
         {
             titleName: '【京东】荣耀80 12GB+512GB 亮黑色 【MDZX】',
             articlePrice: '京东价: ¥3099.00',
@@ -548,14 +529,8 @@
         },
     ];
 
-    var html = '';
-    for (var i = 0; i < listPhone.length; i++) {
-        html += '<div class="article"><img class="articleImg" src=' + listPhone[i].srcPath + '></img><img class="articleImgBig" src=' + listPhone[i].srcPathBig + '></img><div class="articleContent" onclick="toSkip(\'' + listPhone[i].articleCoupon + '\')"><div class="articleTitle">' + listPhone[i].titleName + '</div><div class="articlePrice">' + listPhone[i].articlePrice + '</div><a class="articleCoupon" href=' + listPhone[i].articleCoupon + '>领券抢购: ' + listPhone[i].articleCoupon + '</a><a class="articlePacket" href=' + listPhone[i].articlePacket + '>领红包 更省钱:' + listPhone[i].articlePacket + ' </a></div></div><div class="divider"></div>'
-    }
-    ;
-    document.getElementById('contentPhone').innerHTML = html;
 
-    var listMeizhuang = [
+    const listMeizhuang = [
         {
             titleName: '【京东】【领券直降】雅诗兰黛小棕瓶特润修护精华液50ml面部精华护肤品化妆品生日礼物送女友',
             articlePrice: '京东价: ¥935.00 <br/>券后价: ¥865.00',
@@ -606,29 +581,42 @@
         },
     ];
 
-    var html = '';
-    for (var i = 0; i < listMeizhuang.length; i++) {
-        html += '<div class="article"><img class="articleImg" src=' + listMeizhuang[i].srcPath + '></img><img class="articleImgBig" src=' + listMeizhuang[i].srcPathBig + '></img><div class="articleContent" onclick="toSkip(\'' + listMeizhuang[i].articleCoupon + '\')"><div class="articleTitle">' + listMeizhuang[i].titleName + '</div><div class="articlePrice">' + listMeizhuang[i].articlePrice + '</div><a class="articleCoupon" href=' + listMeizhuang[i].articleCoupon + '>领券抢购: ' + listMeizhuang[i].articleCoupon + '</a><a class="articlePacket" href=' + listMeizhuang[i].articlePacket + '>领红包 更省钱:' + listMeizhuang[i].articlePacket + ' </a></div></div><div class="divider"></div>'
-    }
-    ;
-    document.getElementById('contentMeizhuang').innerHTML = html;
-
 
     function toSkip(articleCoupon) {
         window.location.href = articleCoupon;
     };
-    var dataList = [];
 
-    function tableClick(position) {
-        dataList = [];
-
-        dataList =
-        var html = '';
-        for (var i = 0; i < listJiadian.length; i++) {
-            html += '<div class="article"><img class="articleImg" src=' + listJiadian[i].srcPath + '></img><img class="articleImgBig" src=' + listJiadian[i].srcPathBig + '></img><div class="articleContent" onclick="toSkip(\'' + listJiadian[i].articleCoupon + '\')"><div class="articleTitle">' + listJiadian[i].titleName + '</div><div class="articlePrice">' + listJiadian[i].articlePrice + '</div><a class="articleCoupon" href=' + listJiadian[i].articleCoupon + '>领券抢购: ' + listJiadian[i].articleCoupon + '</a><a class="articlePacket" href=' + listJiadian[i].articlePacket + '>领红包 更省钱:' + listJiadian[i].articlePacket + ' </a></div></div><div class="divider"></div>'
+    const listTable = [
+        {
+            title: "家电",
+            list: listJiadian,
+        },
+        {
+            title: "手机/电脑",
+            list: listPhone,
+        },
+        {
+            title: "美妆/护肤",
+            list: listMeizhuang,
         }
-        ;
-        document.getElementById('contentJiaDian').innerHTML = html;
+    ]
+
+    let dataList = [];
+
+    function tableClick(title) {
+        dataList = [];
+        for (let j = 0; j < listTable.length; j++) {
+            let listTableElement = listTable[j];
+            if (title == listTableElement.title) {
+                dataList = listTableElement.list.slice();
+                break;
+            }
+        }
+        let html = '';
+        for (let i = 0; i < dataList.length; i++) {
+            html += '<div class="article"><img class="articleImg" src=' + dataList[i].srcPath + '></img><img class="articleImgBig" src=' + dataList[i].srcPathBig + '></img><div class="articleContent" onclick="toSkip(\'' + dataList[i].articleCoupon + '\')"><div class="articleTitle">' + dataList[i].titleName + '</div><div class="articlePrice">' + dataList[i].articlePrice + '</div><a class="articleCoupon" href=' + dataList[i].articleCoupon + '>领券抢购: ' + dataList[i].articleCoupon + '</a><a class="articlePacket" href=' + dataList[i].articlePacket + '>领红包 更省钱:' + dataList[i].articlePacket + ' </a></div></div><div class="divider"></div>'
+        }
+        document.getElementById('contentTest').innerHTML = html;
     }
 
 
