@@ -29,10 +29,11 @@
         }
         .articleImg:hover ~.articleImgBig{
           position: absolute;
-         margin-left:90px;
+          margin-left:90px;
           width: 200px;
           height: 264px;
           display:flex;
+          border:1px solid #A5A5A5;
         }
         .article{
 		display:flex;
@@ -108,6 +109,7 @@
           width: 300px;
           height: 400px;
           display:flex;
+          border:1px solid #A5A5A5;
         }
         .article{
 		display:flex;
@@ -236,19 +238,27 @@
 
 
 
+/* 滑动导航 */
+nav {
+			overflow-x: auto;
+			white-space: nowrap;
+			background-color: #333;
+			padding: 10px;
+		}
 
+		nav a {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px;
+			text-decoration: none;
+			font-size: 17px;
+		}
 
-
-
-
-
-
-
-
-
-
-
-
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
 
 
     </style>
@@ -261,6 +271,20 @@
             <img id="lbt" src="./imgs/banner1.png" width="100%" height="100%"/>
         </div>
     </section>
+    <nav>
+        <a href="#">家电</a>
+        <a href="#">手机/电脑</a>
+        <a href="#">美妆/护肤</a>
+        <a href="#">新闻</a>
+        <a href="#">产品</a>
+        <a href="#">关于我们</a>
+        <a href="#">联系我们</a>
+        <a href="#">加入我们</a>
+        <a href="#">反馈</a>
+        <a href="#">帮助</a>
+        <a href="#">设置</a>
+        <a href="#">退出</a>
+    </nav>
     <section>
         <!-- <div class="article" onclick="toDetail(0)">
              <img class="articleImg" src="./imgs/fengshan.jpg"/>
@@ -280,19 +304,20 @@
          </div>-->
         <h3>家电</h3>
         <div id="contentJiaDian"></div>
-        <h3>美妆护肤</h3>
+        <h3>手机/电脑</h3>
+        <div id="contentPhone"></div>
+        <h3>美妆/护肤</h3>
         <div id="contentMeizhuang"></div>
     </section>
 </main>
 <footer>
-    <p style="color:#A5A5A5">版权所有 © 2023 yudonghui</p>
+    <p style="color:#A5A5A5;margin-top:20px">版权所有 © 2023 yudonghui</p>
 </footer>
 </body>
 </html>
-
+<script src="./jquery-3.7.0.min.js">
+</script>
 <script>
-
-
     function init(){
        setInterval("changeImg()",2000);
     }
@@ -338,15 +363,24 @@
             {titleName:'【京东】苏泊尔（SUPOR）电饭煲Pro电饭锅4L远红外系列 IH电磁加热 远红外穿透本釜内胆 家用智能多功能电饭煲SF40HC786',articlePrice:'京东价: ¥769.00',srcPath:'./imgs/dianfanbao3.jpg',srcPathBig:'./imgs/dianfanbao3big.jpg',articleCoupon:'https://u.jd.com/auGolcu',articlePacket:'https://u.jd.com/auGm059'},
             {titleName:'【京东】【领券直降】美的（Midea）纤V系列 IH智能电饭煲Pro电饭锅家用4L大容量一级能效预约精铁釜蒸米饭锅FB40S701（3-8人）',articlePrice:'京东价: ¥550.00 <br/>券后价:  ¥520.00',srcPath:'./imgs/dianfanbao4.jpg',srcPathBig:'./imgs/dianfanbao4big.jpg',articleCoupon:'https://u.jd.com/asG49qv',articlePacket:'https://u.jd.com/a8GFEW8'},
 
-
         ];
 
    var html='';
    for(var i=0;i<listJiadian.length;i++){
-     html+='<div class="article"><img class="articleImg" src='+listJiadian[i].srcPath+'></img><img class="articleImgBig" src='+listJiadian[i].srcPathBig+'></img><div class="articleContent"><div class="articleTitle">'+listJiadian[i].titleName+'</div><div class="articlePrice">'+listJiadian[i].articlePrice+'</div><a class="articleCoupon" href='+listJiadian[i].articleCoupon+'>领券抢购: '+listJiadian[i].articleCoupon+'</a><a class="articlePacket" href='+listJiadian[i].articlePacket+'>领红包 更省钱:'+listJiadian[i].articlePacket+' </a></div></div><div class="divider"></div>'
+     html+='<div class="article"><img class="articleImg" src='+listJiadian[i].srcPath+'></img><img class="articleImgBig" src='+listJiadian[i].srcPathBig+'></img><div class="articleContent" onclick="toSkip(\''+listJiadian[i].articleCoupon+'\')"><div class="articleTitle">'+listJiadian[i].titleName+'</div><div class="articlePrice">'+listJiadian[i].articlePrice+'</div><a class="articleCoupon" href='+listJiadian[i].articleCoupon+'>领券抢购: '+listJiadian[i].articleCoupon+'</a><a class="articlePacket" href='+listJiadian[i].articlePacket+'>领红包 更省钱:'+listJiadian[i].articlePacket+' </a></div></div><div class="divider"></div>'
    };
    document.getElementById('contentJiaDian').innerHTML = html;
 
+  var listPhone = [
+            {titleName:'【京东】荣耀80 12GB+512GB 亮黑色 【MDZX】',articlePrice:'京东价: ¥3099.00',srcPath:'./imgs/phone1.jpg',srcPathBig:'./imgs/phone1big.jpg',articleCoupon:'https://u.jd.com/ai6Hzbc',articlePacket:'https://u.jd.com/aQ6HH54'},
+            {titleName:'【京东】荣耀X50i 一亿像素超清影像 12GB+256GB超大双存 6.7英寸超窄边护眼全视屏 5G手机 12GB+256GB 幻夜黑',articlePrice:'京东价: ¥1699.00',srcPath:'./imgs/phone2.jpg',srcPathBig:'./imgs/phone2big.jpg',articleCoupon:'https://u.jd.com/a86ZOI4',articlePacket:'https://u.jd.com/as6lUfm'},
+        ];
+
+   var html='';
+   for(var i=0;i<listPhone.length;i++){
+     html+='<div class="article"><img class="articleImg" src='+listPhone[i].srcPath+'></img><img class="articleImgBig" src='+listPhone[i].srcPathBig+'></img><div class="articleContent" onclick="toSkip(\''+listPhone[i].articleCoupon+'\')"><div class="articleTitle">'+listPhone[i].titleName+'</div><div class="articlePrice">'+listPhone[i].articlePrice+'</div><a class="articleCoupon" href='+listPhone[i].articleCoupon+'>领券抢购: '+listPhone[i].articleCoupon+'</a><a class="articlePacket" href='+listPhone[i].articlePacket+'>领红包 更省钱:'+listPhone[i].articlePacket+' </a></div></div><div class="divider"></div>'
+   };
+   document.getElementById('contentPhone').innerHTML = html;
 
    var listMeizhuang = [
             {titleName:'【京东】【领券直降】雅诗兰黛小棕瓶特润修护精华液50ml面部精华护肤品化妆品生日礼物送女友',articlePrice:'京东价: ¥935.00 <br/>券后价: ¥865.00',srcPath:'./imgs/meizhuang1.jpg',srcPathBig:'./imgs/meizhuang1big.jpg',articleCoupon:'https://u.jd.com/a8tIigR',articlePacket:'https://u.jd.com/ait8Rtj'},
@@ -359,14 +393,25 @@
 
    var html='';
    for(var i=0;i<listMeizhuang.length;i++){
-     html+='<div class="article"><img class="articleImg" src='+listMeizhuang[i].srcPath+'></img><img class="articleImgBig" src='+listMeizhuang[i].srcPathBig+'></img><div class="articleContent"><div class="articleTitle">'+listMeizhuang[i].titleName+'</div><div class="articlePrice">'+listMeizhuang[i].articlePrice+'</div><a class="articleCoupon" href='+listMeizhuang[i].articleCoupon+'>领券抢购: '+listMeizhuang[i].articleCoupon+'</a><a class="articlePacket" href='+listMeizhuang[i].articlePacket+'>领红包 更省钱:'+listMeizhuang[i].articlePacket+' </a></div></div><div class="divider"></div>'
+     html+='<div class="article"><img class="articleImg" src='+listMeizhuang[i].srcPath+'></img><img class="articleImgBig" src='+listMeizhuang[i].srcPathBig+'></img><div class="articleContent" onclick="toSkip(\''+listMeizhuang[i].articleCoupon+'\')"><div class="articleTitle">'+listMeizhuang[i].titleName+'</div><div class="articlePrice">'+listMeizhuang[i].articlePrice+'</div><a class="articleCoupon" href='+listMeizhuang[i].articleCoupon+'>领券抢购: '+listMeizhuang[i].articleCoupon+'</a><a class="articlePacket" href='+listMeizhuang[i].articlePacket+'>领红包 更省钱:'+listMeizhuang[i].articlePacket+' </a></div></div><div class="divider"></div>'
    };
    document.getElementById('contentMeizhuang').innerHTML = html;
 
 
+   function toSkip(articleCoupon){
+       window.location.href = articleCoupon;
+   };
+    var dataList=[];
+    function tableClick(position){
+    dataList=[];
 
-
-
+    dataList=
+    var html='';
+       for(var i=0;i<listJiadian.length;i++){
+         html+='<div class="article"><img class="articleImg" src='+listJiadian[i].srcPath+'></img><img class="articleImgBig" src='+listJiadian[i].srcPathBig+'></img><div class="articleContent" onclick="toSkip(\''+listJiadian[i].articleCoupon+'\')"><div class="articleTitle">'+listJiadian[i].titleName+'</div><div class="articlePrice">'+listJiadian[i].articlePrice+'</div><a class="articleCoupon" href='+listJiadian[i].articleCoupon+'>领券抢购: '+listJiadian[i].articleCoupon+'</a><a class="articlePacket" href='+listJiadian[i].articlePacket+'>领红包 更省钱:'+listJiadian[i].articlePacket+' </a></div></div><div class="divider"></div>'
+       };
+       document.getElementById('contentJiaDian').innerHTML = html;
+    }
 
 
 </script>

@@ -5,53 +5,181 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-			img{
-				width: 757px;
-				height: 500px;
-			}
-			/* 显示一张图片的宽高 */
-			.box{
-				width: 757px;
-				height: 500px;
-				border: 1px solid red;
-				overflow: hidden;
-				margin: 0 auto;
-			}
-						/*所有图片总宽度 */
-			.box .imgs{
-			   width: 2271px;
-			   height: 500px;
-			   /* 图片不换行 */
-			   white-space: nowrap;
-			   /* =================== */
-			   animation: mybox 6s steps(3) infinite;
-			}
+		.nav-container {
 
-			@keyframes mybox{
-				/* ================== */
-				0%{
-					transform: translateX(0);
-				}
+  overflow-x: scroll;
 
-				100%{
-					transform: translateX(-2271px);
-				}
-			}
+  white-space: nowrap;
+
+}
+
+
+
+.nav {
+
+  display: inline-block;
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  width: 100%;
+
+}
+
+
+
+.nav li {
+
+  display: inline-block;
+
+  text-align: center;
+
+  width: 120px;
+
+}
+
+
+
+.nav li a {
+
+  display: block;
+
+  padding: 10px;
+
+  text-decoration: none;
+
+}
 
 		</style>
 </head>
 <body>
-<div class="wrapper">
-    <!-- 显示一张图片宽高 -->
-    <div class="box">
-        <!-- 显示3张图片的宽高 -->
-        <!-- 照片自行更换 -->
-        <div class="imgs">
-            <img src="./imgs/banner3.png" alt="">
-            <img src="./imgs/banner4.png" alt="">
-            <img src="./imgs/banner5.png" alt="">
-        </div>
-    </div>
+<div class="nav-container">
+
+    <ul class="nav">
+
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#">About Us</a></li>
+
+        <li><a href="#">Products</a></li>
+
+        <li><a href="#">Contact Us</a></li>
+
+        <li><a href="#">Blog</a></li>
+
+        <li><a href="#">FAQs</a></li>
+
+        <li><a href="#">Support</a></li>
+
+        <li><a href="#">Join Us</a></li>
+
+    </ul>
+
 </div>
 </body>
+<script src="./jquery-3.7.0.min.js">
+
+</script>
+<script>
+  $('.nav-arrow').on('click', function() {
+
+  var direction = $(this).data('direction');
+
+  var distance = $('.nav li:first-child').outerWidth();
+
+
+
+  if (direction === 'prev') {
+
+    $('.nav-container').animate({scrollLeft: '-=' + distance});
+
+  } else {
+
+    $('.nav-container').animate({scrollLeft: '+=' + distance});
+
+  }
+
+});
+$('.nav-container').on('scroll', function() {
+
+  var distance = $('.nav li:first-child').outerWidth();
+
+  var scrollLeft = $(this).scrollLeft();
+
+
+
+  if (scrollLeft === 0) {
+
+    $('.nav-arrow.prev').addClass('disabled');
+
+  } else {
+
+    $('.nav-arrow.prev').removeClass('disabled');
+
+  }
+
+
+
+  if (scrollLeft + distance >= $('.nav').outerWidth()) {
+
+    $('.nav-arrow.next').addClass('disabled');
+
+  } else {
+
+    $('.nav-arrow.next').removeClass('disabled');
+
+  }
+
+});
+function initNav() {
+
+  var distance = $('.nav li:first-child').outerWidth();
+
+  var navWidth = $('.nav').outerWidth();
+
+  var containerWidth = $('.nav-container').outerWidth();
+
+
+
+  if (navWidth > containerWidth) {
+
+    $('.nav-arrow.next').removeClass('disabled');
+
+  }
+
+
+
+  $('.nav-arrow').css('top', ($('.nav').outerHeight() / 2 - $('.nav-arrow').outerHeight() / 2));
+
+
+
+  $('.nav li').each(function() {
+
+    var itemWidth = $(this).outerWidth();
+
+    if (itemWidth > distance) {
+
+      distance = itemWidth;
+
+    }
+
+  });
+
+
+
+  $('.nav li').each(function() {
+
+    $(this).css('width', distance + 'px');
+
+  });
+
+}
+
+
+
+initNav();
+</script>
 </html>
