@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义首页</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 100%;
+            column-count: 8;
+            text-align: center;
+        }
+
+        .iconLogo {
+            width: 80px;
+            margin-top: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container" class="container">
+
+</div>
+
+</body>
+<script>
+
+    let listBanner = [
+        {
+            titleName: 'CSDN',
+            srcPath: 'imgs/csdn.png',
+            hrefUrl: 'https://mp.csdn.net/mp_blog/manage/article'
+        },
+        {
+            titleName: 'github',
+            srcPath: 'imgs/github.png',
+            hrefUrl: 'https://github.com/'
+        },
+        {
+            titleName: 'Twitter',
+            srcPath: 'imgs/twitter.png',
+            hrefUrl: 'https://twitter.com/home'
+        },
+        {
+            titleName: 'Google',
+            srcPath: 'imgs/google.png',
+            hrefUrl: 'https://www.google.com/'
+        },
+        {
+            titleName: '简书',
+            srcPath: 'imgs/jianshu.png',
+            hrefUrl: 'https://www.jianshu.com/'
+        },
+        {
+            titleName: '百度翻译',
+            srcPath: 'imgs/baidufanyi.png',
+            hrefUrl: 'https://fanyi.baidu.com/translate'
+        },
+        {
+            titleName: '腾讯文档',
+            srcPath: 'imgs/wendang.png',
+            hrefUrl: 'https://docs.qq.com/desktop/mydoc/folder/VduNTHItkWRu'
+        },
+        {
+            titleName: 'gitee',
+            srcPath: 'imgs/gitee.png',
+            hrefUrl: 'https://gitee.com/'
+        },
+        {
+            titleName: '上海测试',
+            srcPath: 'imgs/meilaitest.png',
+            hrefUrl: 'http://crmuat.shmylike.cn/crm/index.do'
+        },
+        {
+            titleName: '个人页面',
+            srcPath: 'imgs/gerenyemian.png',
+            hrefUrl: 'http://crmuat.shmylike.cn/crm/index.do'
+        },
+        {
+            titleName: '商品推广',
+            srcPath: 'imgs/logo618.jpg',
+            hrefUrl: 'https://activity-canz.onrender.com'
+        },
+        {
+            titleName: '一句话日报',
+            srcPath: 'imgs/oneribao.png',
+            hrefUrl: 'https://docs.qq.com/sheet/DUVJyY2VIQVpuUWR2'
+        },
+    ]
+    let html = '';
+    for (let i = 0; i < listBanner.length; i++) {
+        html += '<a href=' + listBanner[i].hrefUrl + '><img class="iconLogo" src=' + listBanner[i].srcPath + '></img><div class="title">' + listBanner[i].titleName + '</div></a>';
+    }
+    document.getElementById('container').innerHTML = html;
+</script>
+</html>
