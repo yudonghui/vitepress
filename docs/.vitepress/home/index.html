@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自定义首页</title>
+    <link href="./imgs/homelogo.png" rel="icon" type="image/x-ico"/>
     <style>
         .container {
             width: 100%;
@@ -14,14 +15,26 @@
             text-align: center;
         }
 
+        .title {
+            padding-bottom: 10px;
+        }
+
         .iconLogo {
-            width: 80px;
+            width: 30px;
             margin-top: 25px;
             margin-left: 10px;
             margin-right: 10px;
-            height: 80px;
+            height: 30px;
+            padding: 20px;
         }
 
+        a {
+            text-decoration: none;
+        }
+
+        a:hover .iconBg {
+            background-color: #EAEAEA;
+        }
     </style>
 </head>
 <body>
@@ -94,10 +107,15 @@
             srcPath: 'imgs/oneribao.png',
             hrefUrl: 'https://docs.qq.com/sheet/DUVJyY2VIQVpuUWR2'
         },
+        {
+            titleName: 'Json解析',
+            srcPath: 'imgs/json.png',
+            hrefUrl: 'https://www.json.cn/'
+        },
     ]
     let html = '';
     for (let i = 0; i < listBanner.length; i++) {
-        html += '<a href=' + listBanner[i].hrefUrl + '><img class="iconLogo" src=' + listBanner[i].srcPath + '></img><div class="title">' + listBanner[i].titleName + '</div></a>';
+        html += '<a href=' + listBanner[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listBanner[i].srcPath + '></img><div class="title">' + listBanner[i].titleName + '</div></div></a>';
     }
     document.getElementById('container').innerHTML = html;
 </script>
