@@ -11,8 +11,9 @@
         .container {
             width: 100%;
             height: 100%;
-            column-count: 8;
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .title {
@@ -21,11 +22,9 @@
 
         .iconLogo {
             width: 30px;
-            margin-top: 25px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin: 40px 50px 10px;
             height: 30px;
-            padding: 20px;
+
         }
 
         a {
@@ -40,6 +39,12 @@
 <body>
 
 <div id="container" class="container">
+
+</div>
+<div id="fanqiang" class="container">
+
+</div>
+<div id="meilai" class="container">
 
 </div>
 
@@ -57,16 +62,7 @@
             srcPath: 'imgs/github.png',
             hrefUrl: 'https://github.com/'
         },
-        {
-            titleName: 'Twitter',
-            srcPath: 'imgs/twitter.png',
-            hrefUrl: 'https://twitter.com/home'
-        },
-        {
-            titleName: 'Google',
-            srcPath: 'imgs/google.png',
-            hrefUrl: 'https://www.google.com/'
-        },
+
         {
             titleName: '简书',
             srcPath: 'imgs/jianshu.png',
@@ -87,11 +83,7 @@
             srcPath: 'imgs/gitee.png',
             hrefUrl: 'https://gitee.com/'
         },
-        {
-            titleName: '上海测试',
-            srcPath: 'imgs/meilaitest.png',
-            hrefUrl: 'http://crmuat.shmylike.cn/crm/index.do'
-        },
+
         {
             titleName: '个人页面',
             srcPath: 'imgs/gerenyemian.png',
@@ -112,11 +104,87 @@
             srcPath: 'imgs/json.png',
             hrefUrl: 'https://www.json.cn/'
         },
+        {
+            titleName: '友盟',
+            srcPath: 'imgs/youmeng.png',
+            hrefUrl: 'https://mobile.umeng.com/platform/apps/list'
+        },
+        {
+            titleName: '腾讯体育',
+            srcPath: 'imgs/txtiyu.png',
+            hrefUrl: 'https://sports.qq.com/nba/index.shtml'
+        },
+        {
+            titleName: '有银聊天',
+            srcPath: 'imgs/youyin.png',
+            hrefUrl: 'https://www.chat.jast.top/#/chat/1002'
+        },
+        {
+            titleName: 'fir.im',
+            srcPath: 'imgs/firim.png',
+            hrefUrl: 'https://www.betaqr.com/apps'
+        },
     ]
     let html = '';
     for (let i = 0; i < listBanner.length; i++) {
         html += '<a href=' + listBanner[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listBanner[i].srcPath + '></img><div class="title">' + listBanner[i].titleName + '</div></div></a>';
     }
     document.getElementById('container').innerHTML = html;
+
+    let listMeilai = [
+        {
+            titleName: '上海测试',
+            srcPath: 'imgs/meilai.png',
+            hrefUrl: 'http://crmuat.shmylike.cn/crm/index.do'
+        },
+        {
+            titleName: '苏州美莱',
+            srcPath: 'imgs/meilai.png',
+            hrefUrl: 'http://suzhouml.mylike.com/crm/index.do'
+        },
+    ]
+    let htmlMl = '';
+    for (let i = 0; i < listMeilai.length; i++) {
+        htmlMl += '<a href=' + listMeilai[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listMeilai[i].srcPath + '></img><div class="title">' + listMeilai[i].titleName + '</div></div></a>';
+    }
+    document.getElementById('meilai').innerHTML = htmlMl;
+
+    let listFanQ = [
+        {
+            titleName: 'Twitter',
+            srcPath: 'imgs/twitter.png',
+            hrefUrl: 'https://twitter.com/home'
+        },
+        {
+            titleName: 'Google',
+            srcPath: 'imgs/google.png',
+            hrefUrl: 'https://www.google.com/'
+        },
+        {
+            titleName: 'Google开发者',
+            srcPath: 'imgs/googleDeveloper.png',
+            hrefUrl: 'https://play.google.com/console/u/0/developers/8528875975214669210/app-list'
+        },
+        {
+            titleName: 'OpenAI官网',
+            srcPath: 'imgs/openai.png',
+            hrefUrl: 'https://platform.openai.com/account/usage'
+        },
+        {
+            titleName: 'render网站',
+            srcPath: 'imgs/render.png',
+            hrefUrl: 'https://dashboard.render.com/'
+        },
+        {
+            titleName: 'supabase数据库',
+            srcPath: 'imgs/supabase.png',
+            hrefUrl: 'https://app.supabase.com/project/iaoqbthyohbschdxnvya/editor'
+        },
+    ]
+    let htmlFQ = '';
+    for (let i = 0; i < listFanQ.length; i++) {
+        htmlFQ += '<a href=' + listFanQ[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listFanQ[i].srcPath + '></img><div class="title">' + listFanQ[i].titleName + '</div></div></a>';
+    }
+    document.getElementById('fanqiang').innerHTML = htmlFQ;
 </script>
 </html>
