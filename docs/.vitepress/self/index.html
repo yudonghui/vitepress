@@ -343,8 +343,9 @@
 </footer>
 </body>
 </html>
-<script src="./jquery-3.7.0.min.js">
-</script>
+<script src="./jquery-3.7.0.min.js"></script>
+<!--<script src="./jquery-3.0.0.js"></script>-->
+<script type="text/javascript" src="./md5.js"></script>
 <script>
     function init() {
         setInterval("changeImg()", 2000);
@@ -423,7 +424,7 @@
             titleName: '【京东】【领券直降】海尔（Haier）冰箱412L法式双开门四开门多门家用一级能效双变频家用超薄嵌入式风冷无霜超大容量家电智能旗舰 412L+母婴专储空间+冷藏三档变温+黑金净化系统',
             articlePrice: '预售价: ¥3297.90 <br/>券后预售价: ¥2997.90',
             srcPath: './imgs/bingxiang2.jpg',
-            srcPathBig: './imgs/ringing2big.jpg',
+            srcPathBig: './imgs/bingxiang2big.jpg',
             articleCoupon: 'https://u.jd.com/OuhU5gN',
             articlePacket: 'https://u.jd.com/Ozh5XDj'
         },
@@ -808,6 +809,94 @@
             html += '<div class="article"><img class="articleImg" src=' + dataList[i].srcPath + '></img><img class="articleImgBig" src=' + dataList[i].srcPathBig + '></img><div class="articleContent" onclick="toSkip(\'' + dataList[i].articleCoupon + '\')"><div class="articleTitle">' + dataList[i].titleName + '</div><div class="articlePrice">' + dataList[i].articlePrice + '</div><a class="articleCoupon" href=' + dataList[i].articleCoupon + '>领券抢购: ' + dataList[i].articleCoupon + '</a><a class="articlePacket" href=' + dataList[i].articlePacket + '>领红包 更省钱:' + dataList[i].articlePacket + ' </a></div></div><div class="divider"></div>'
         }
         document.getElementById('contentTest').innerHTML = html;
+        getData("20")
+    }
+
+
+    Date.prototype.format = function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours() % 12 == 0 ? 12 : this.getHours() % 12, //小时
+            "H+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt))
+            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+
+    function getData(eliteId) {
+
+        var settings = {
+            "url": 'https://ydh.zeabur.app/jd?eliteId=' + eliteId + '&timestamp=2023-06-09 16:34:55',
+            "method": "GET",
+            "timeout": 3000,
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+        /*
+              网站需要备案 用APP的调用接口会出现跨域问题
+              var form = new FormData();
+                form.append("360buy_param_json", "{\"goodsReq\":{\"eliteId\":\"" + eliteId + "\",\"pageIndex\":1,\"pageSize\":10}}");
+                form.append("app_key", "8724dd097e248b402993f9550b287e0d");
+                form.append("format", "json");
+                form.append("method", "jd.union.open.goods.jingfen.query");
+                form.append("sign", "AA9F9DF3610F0A021C4E722FE6C9A594");
+                form.append("sign_method", "md5");
+                form.append("timestamp", "2023-06-06 16:50:21");
+                form.append("v", "1.0");
+
+                var settings = {
+                    "url": "https://api.jd.com/routerjson",
+                    "method": "POST",
+                    "timeout": 2000,
+                    "processData": false,
+                    "mimeType": "multipart/form-data",
+                    "contentType": false,
+                    "data": form
+                };
+
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                });*/
+
+
+        /*   let formData = new FormData();
+           let timestamp = new Date().format("yyyy-MM-dd HH:mm:ss");
+           let jsonParam = '{"goodsReq":{"eliteId":' + eliteId + ',"pageIndex":1,"pageSize":10}}';
+           formData.append('360buy_param_json', JSON.parse(jsonParam));
+           formData.append('app_key', '8724dd097e248b402993f9550b287e0d');
+           formData.append('format', 'json');
+           formData.append('method', 'jd.union.open.goods.jingfen.query');
+           formData.append('sign_method', 'md5');
+           formData.append('timestamp', timestamp);
+           formData.append('v', '1.0');
+           let str = 'c7b290141c2145ba9d052a563b5a03b6360buy_param_json' + jsonParam + 'app_key8724dd097e248b402993f9550b287e0d&formatjson&methodjd.union.open.goods.jingfen.query&sign_methodmd5&timestamp' + timestamp + 'v1.0c7b290141c2145ba9d052a563b5a03b6'
+           console.log(str);
+           let sign = hex_md5(str);
+           console.log(sign);
+           formData.append('sign', sign)
+           $.ajax({
+               url: 'https://api.jd.com/routerjson',
+               type: 'POST',
+               contentType: 'multipart/form-data',
+               data: formData,
+               success: function (jsonData) {
+                   console.log(jsonData);
+               },
+               error: function (jqXHR, textStatus, errorThrown) {
+                   console.log(textStatus, errorThrown);
+               }
+           })*/
     }
 
 
