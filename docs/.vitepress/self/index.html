@@ -51,6 +51,7 @@
                 margin-top: 10px;
                 font-size: 16px;
             }
+
             .shopName {
                 color: #1BAAF0;
                 margin-top: 5px;
@@ -146,6 +147,7 @@
                 margin-top: 10px;
                 font-size: 18px;
             }
+
             .shopName {
                 color: #1BAAF0;
                 margin-top: 5px;
@@ -422,7 +424,13 @@
             let html = '';
             for (let i = 0; i < data.length; i++) {
                 let dataEntity = data[i];
-                html += ' <div class="article"><img class="articleImg"src=' + dataEntity.imgUrl + '></img><img class="articleImgBig" src=' + dataEntity.imgUrl + '></img><div class="articleContent"onclick="toSkip(\'' + dataEntity.couponUrl + '\')"><div class="articleTitle">' + dataEntity.skuName + '</div><div class="comments">' + dataEntity.comments + '条评价 ' + dataEntity.goodCommentsShare + '%好评</div><div class="shopName">' + dataEntity.shopName + '</div><div class="articlePriceOrCounps"><div class="discount">券' + dataEntity.discount + '</div><div class="price">原价: ￥' + dataEntity.price + '</div><div class="lowestCouponPrice">实付价: ￥' + dataEntity.lowestCouponPrice + '</div></div></div></div><div class="divider"></div>'
+                let skipUrl;
+                if (dataEntity.couponUrl == null || dataEntity.couponUrl == '') {
+                    skipUrl = 'https://' + dataEntity.materialUrl;
+                } else {
+                    skipUrl = dataEntity.couponUrl;
+                }
+                html += ' <div class="article"><img class="articleImg"src=' + dataEntity.imgUrl + '></img><img class="articleImgBig" src=' + dataEntity.imgUrl + '></img><div class="articleContent"onclick="toSkip(\'' + skipUrl + '\')"><div class="articleTitle">' + dataEntity.skuName + '</div><div class="comments">' + dataEntity.comments + '条评价 ' + dataEntity.goodCommentsShare + '%好评</div><div class="shopName">' + dataEntity.shopName + '</div><div class="articlePriceOrCounps"><div class="discount">券' + dataEntity.discount + '</div><div class="price">原价: ￥' + dataEntity.price + '</div><div class="lowestCouponPrice">实付价: ￥' + dataEntity.lowestCouponPrice + '</div></div></div></div><div class="divider"></div>'
             }
             document.getElementById('content').innerHTML = html;
         });
@@ -446,6 +454,7 @@
                 fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         return fmt;
     }
+
     function toSkip(articleCoupon) {
         window.location.href = articleCoupon;
     };
