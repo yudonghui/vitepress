@@ -5,55 +5,52 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-		.nav-container {
+        .nav-container {
 
-  overflow-x: scroll;
+            overflow-x: scroll;
 
-  white-space: nowrap;
+            white-space: nowrap;
 
-}
-
-
-
-.nav {
-
-  display: inline-block;
-
-  list-style-type: none;
-
-  margin: 0;
-
-  padding: 0;
-
-  width: 100%;
-
-}
+        }
 
 
+        .nav {
 
-.nav li {
+            display: inline-block;
 
-  display: inline-block;
+            list-style-type: none;
 
-  text-align: center;
+            margin: 0;
 
-  width: 120px;
+            padding: 0;
 
-}
+            width: 100%;
+
+        }
 
 
+        .nav li {
 
-.nav li a {
+            display: inline-block;
 
-  display: block;
+            text-align: center;
 
-  padding: 10px;
+            width: 120px;
 
-  text-decoration: none;
+        }
 
-}
 
-		</style>
+        .nav li a {
+
+            display: block;
+
+            padding: 10px;
+
+            text-decoration: none;
+
+        }
+
+    </style>
 </head>
 <body>
 <div class="nav-container">
@@ -84,102 +81,95 @@
 
 </script>
 <script>
-  $('.nav-arrow').on('click', function() {
+    $('.nav-arrow').on('click', function () {
 
-  var direction = $(this).data('direction');
+        var direction = $(this).data('direction');
 
-  var distance = $('.nav li:first-child').outerWidth();
-
-
-
-  if (direction === 'prev') {
-
-    $('.nav-container').animate({scrollLeft: '-=' + distance});
-
-  } else {
-
-    $('.nav-container').animate({scrollLeft: '+=' + distance});
-
-  }
-
-});
-$('.nav-container').on('scroll', function() {
-
-  var distance = $('.nav li:first-child').outerWidth();
-
-  var scrollLeft = $(this).scrollLeft();
+        var distance = $('.nav li:first-child').outerWidth();
 
 
+        if (direction === 'prev') {
 
-  if (scrollLeft === 0) {
+            $('.nav-container').animate({scrollLeft: '-=' + distance});
 
-    $('.nav-arrow.prev').addClass('disabled');
+        } else {
 
-  } else {
+            $('.nav-container').animate({scrollLeft: '+=' + distance});
 
-    $('.nav-arrow.prev').removeClass('disabled');
+        }
 
-  }
+    });
+    $('.nav-container').on('scroll', function () {
 
+        var distance = $('.nav li:first-child').outerWidth();
 
-
-  if (scrollLeft + distance >= $('.nav').outerWidth()) {
-
-    $('.nav-arrow.next').addClass('disabled');
-
-  } else {
-
-    $('.nav-arrow.next').removeClass('disabled');
-
-  }
-
-});
-function initNav() {
-
-  var distance = $('.nav li:first-child').outerWidth();
-
-  var navWidth = $('.nav').outerWidth();
-
-  var containerWidth = $('.nav-container').outerWidth();
+        var scrollLeft = $(this).scrollLeft();
 
 
+        if (scrollLeft === 0) {
 
-  if (navWidth > containerWidth) {
+            $('.nav-arrow.prev').addClass('disabled');
 
-    $('.nav-arrow.next').removeClass('disabled');
+        } else {
 
-  }
+            $('.nav-arrow.prev').removeClass('disabled');
 
-
-
-  $('.nav-arrow').css('top', ($('.nav').outerHeight() / 2 - $('.nav-arrow').outerHeight() / 2));
-
+        }
 
 
-  $('.nav li').each(function() {
+        if (scrollLeft + distance >= $('.nav').outerWidth()) {
 
-    var itemWidth = $(this).outerWidth();
+            $('.nav-arrow.next').addClass('disabled');
 
-    if (itemWidth > distance) {
+        } else {
 
-      distance = itemWidth;
+            $('.nav-arrow.next').removeClass('disabled');
+
+        }
+
+    });
+
+    function initNav() {
+
+        var distance = $('.nav li:first-child').outerWidth();
+
+        var navWidth = $('.nav').outerWidth();
+
+        var containerWidth = $('.nav-container').outerWidth();
+
+
+        if (navWidth > containerWidth) {
+
+            $('.nav-arrow.next').removeClass('disabled');
+
+        }
+
+
+        $('.nav-arrow').css('top', ($('.nav').outerHeight() / 2 - $('.nav-arrow').outerHeight() / 2));
+
+
+        $('.nav li').each(function () {
+
+            var itemWidth = $(this).outerWidth();
+
+            if (itemWidth > distance) {
+
+                distance = itemWidth;
+
+            }
+
+        });
+
+
+        $('.nav li').each(function () {
+
+            $(this).css('width', distance + 'px');
+
+        });
 
     }
 
-  });
 
-
-
-  $('.nav li').each(function() {
-
-    $(this).css('width', distance + 'px');
-
-  });
-
-}
-
-
-
-initNav();
+    initNav();
 </script>
 </html>
