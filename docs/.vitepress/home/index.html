@@ -41,7 +41,13 @@
 <div id="container" class="container">
 
 </div>
+<div id="gongju" class="container">
+
+</div>
 <div id="fanqiang" class="container">
+
+</div>
+<div id="kaifang" class="container">
 
 </div>
 <div id="meilai" class="container">
@@ -104,11 +110,7 @@
             srcPath: 'imgs/json.png',
             hrefUrl: 'https://www.json.cn/'
         },
-        {
-            titleName: '友盟',
-            srcPath: 'imgs/youmeng.png',
-            hrefUrl: 'https://mobile.umeng.com/platform/apps/list'
-        },
+
         {
             titleName: '腾讯体育',
             srcPath: 'imgs/txtiyu.png',
@@ -171,6 +173,11 @@
             hrefUrl: 'https://platform.openai.com/account/usage'
         },
         {
+            titleName: 'bmob数据库',
+            srcPath: 'imgs/bmob.png',
+            hrefUrl: 'https://www.bmobapp.com/app/list'
+        },
+        {
             titleName: 'render网站',
             srcPath: 'imgs/render.png',
             hrefUrl: 'https://dashboard.render.com/'
@@ -191,5 +198,61 @@
         htmlFQ += '<a href=' + listFanQ[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listFanQ[i].srcPath + '></img><div class="title">' + listFanQ[i].titleName + '</div></div></a>';
     }
     document.getElementById('fanqiang').innerHTML = htmlFQ;
+
+    let listGJ = [
+        {
+            titleName: 'URL解码编码',
+            srcPath: 'imgs/code.png',
+            hrefUrl: 'https://www.iamwawa.cn/urldecode.html'
+        },
+        {
+            titleName: '草料二维码',
+            srcPath: 'imgs/caoliao.png',
+            hrefUrl: 'https://cli.im/'
+        },
+        {
+            titleName: '阿里矢量图',
+            srcPath: 'imgs/alishiliang.png',
+            hrefUrl: 'https://www.iconfont.cn/'
+        },
+        {
+            titleName: 'base64图片转换',
+            srcPath: 'imgs/base64tupian.png',
+            hrefUrl: 'https://www.iconfont.cn/'
+        },
+        {
+            titleName: '图片压缩',
+            srcPath: 'imgs/tupianyasuo.png',
+            hrefUrl: 'https://tinypng.com/'
+        },
+    ]
+    let htmlGJ = '';
+    for (let i = 0; i < listGJ.length; i++) {
+        htmlGJ += '<a href=' + listGJ[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listGJ[i].srcPath + '></img><div class="title">' + listGJ[i].titleName + '</div></div></a>';
+    }
+    document.getElementById('gongju').innerHTML = htmlGJ;
+
+    let listKF = [
+        {
+            titleName: '微信公众平台',
+            srcPath: 'imgs/gongzhong.png',
+            hrefUrl: 'https://mp.weixin.qq.com/'
+        },
+        {
+            titleName: '友盟统计',
+            srcPath: 'imgs/youmeng.png',
+            hrefUrl: 'https://mobile.umeng.com/platform/apps/list'
+        },
+        {
+            titleName: '讯飞开放平台',
+            srcPath: 'imgs/xunfei.png',
+            hrefUrl: 'https://console.xfyun.cn/app/myapp'
+        },
+    ]
+    let htmlKF = '';
+    for (let i = 0; i < listKF.length; i++) {
+        htmlKF += '<a href=' + listKF[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listKF[i].srcPath + '></img><div class="title">' + listKF[i].titleName + '</div></div></a>';
+    }
+    document.getElementById('kaifang').innerHTML = htmlKF;
 </script>
 </html>
