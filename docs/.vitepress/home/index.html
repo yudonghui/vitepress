@@ -41,6 +41,9 @@
 <div id="container" class="container">
 
 </div>
+<div id="render" class="container">
+
+</div>
 <div id="gongju" class="container">
 
 </div>
@@ -91,16 +94,6 @@
         },
 
         {
-            titleName: '个人页面',
-            srcPath: 'imgs/gerenyemian.png',
-            hrefUrl: 'https://ydh.onrender.com/'
-        },
-        {
-            titleName: '商品推广',
-            srcPath: 'imgs/logo618.jpg',
-            hrefUrl: 'https://activity-canz.onrender.com'
-        },
-        {
             titleName: '一句话日报',
             srcPath: 'imgs/oneribao.png',
             hrefUrl: 'https://docs.qq.com/sheet/DUVJyY2VIQVpuUWR2'
@@ -138,23 +131,24 @@
     }
     document.getElementById('container').innerHTML = html;
 
-    let listMeilai = [
+
+    let listRender = [
         {
-            titleName: '上海测试',
-            srcPath: 'imgs/meilai.png',
-            hrefUrl: 'http://crmuat.shmylike.cn/crm/index.do'
+            titleName: '个人页面',
+            srcPath: 'imgs/gerenyemian.png',
+            hrefUrl: 'https://ydh.onrender.com/'
         },
         {
-            titleName: '苏州美莱',
-            srcPath: 'imgs/meilai.png',
-            hrefUrl: 'http://suzhouml.mylike.com/crm/index.do'
+            titleName: '商品推广',
+            srcPath: 'imgs/logo618.jpg',
+            hrefUrl: 'https://activity-canz.onrender.com'
         },
     ]
-    let htmlMl = '';
-    for (let i = 0; i < listMeilai.length; i++) {
-        htmlMl += '<a href=' + listMeilai[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listMeilai[i].srcPath + '></img><div class="title">' + listMeilai[i].titleName + '</div></div></a>';
+    let htmlRender = '';
+    for (let i = 0; i < listRender.length; i++) {
+        htmlRender += '<a href=' + listRender[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listRender[i].srcPath + '></img><div class="title">' + listRender[i].titleName + '</div></div></a>';
     }
-    document.getElementById('meilai').innerHTML = htmlMl;
+    document.getElementById('render').innerHTML = htmlRender;
 
     let listFanQ = [
         {
@@ -259,5 +253,24 @@
         htmlKF += '<a href=' + listKF[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listKF[i].srcPath + '></img><div class="title">' + listKF[i].titleName + '</div></div></a>';
     }
     document.getElementById('kaifang').innerHTML = htmlKF;
+
+
+    let listMeilai = [
+        {
+            titleName: '上海测试',
+            srcPath: 'imgs/meilai.png',
+            hrefUrl: 'http://crmuat.shmylike.cn/crm/index.do'
+        },
+        {
+            titleName: '苏州美莱',
+            srcPath: 'imgs/meilai.png',
+            hrefUrl: 'http://suzhouml.mylike.com/crm/index.do'
+        },
+    ]
+    let htmlMl = '';
+    for (let i = 0; i < listMeilai.length; i++) {
+        htmlMl += '<a href=' + listMeilai[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listMeilai[i].srcPath + '></img><div class="title">' + listMeilai[i].titleName + '</div></div></a>';
+    }
+    document.getElementById('meilai').innerHTML = htmlMl;
 </script>
 </html>
