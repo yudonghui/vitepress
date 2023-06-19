@@ -6,124 +6,160 @@
     <title>智能AI</title>
     <link href="./logo.png" rel="icon" type="image/x-ico"/>
     <style>
-    /* 全局 */
-	
-    *{
-      margin: 0;
-      padding: 0;
-    }
-    /* 头部 */
-    header{
-      width: 100%;
-      height: 60px;
-      background: #5E419D;
-    }
-	.logo {
-      width: 35px;
-      height: 35px;
-	  margin-top:12px;
-    }
-	.title{
-		font-size:25px;
-		margin-top:10px;
-		margin-left:10px;
-		margin-bottom:10px;
-		font-weight:bold; 
-		color:#ffffff
-	}
+        /* 全局 */
 
-    .twoCode {
-      width: 100px;
-      height: 100px;
-      margin-left:20px;
-	  margin-top:10px;
-	  margin-right:10px;
-	  float: left;
-    }
-    nav {
-      float: left;
-      margin-left: 5px;
-      color: salmon;
-    }
-	
-    /* 侧边 background: #B3B3FF; */
-    .sideBar{
-      width: 300px;
-      height: 100%;
-      background: #EAEAEA;
-    }
-    .sideBar > .personalInfo,.awards{
-      padding-left: 20px;
-    }
-    .sideBar > .selfEva{
-      padding: 0 5px;
-    }
-    .sideBar > div > h3{
-      color: brown;
-      font-weight: 500;
-      margin-top: 15px;
-	  margin-bottom:10px;
-    }
-	.sideBar > div > ol >li{
-		font-size:15px;
-	}
-    .personalInfo{
-      padding: 5px;
-    }
-    .personalInfo{
-      margin-top: 8px;
-    }
-    .awards{
-      margin-top: 8px;
-    }
-    /*主要内容*/
-    .content{
-	  width:100%;
-      position: absolute;
-      top: 60px;
-      left: 320px;
-    }
-	.articleImg{
-	  margin-top:15px;
-	  margin-bottom:10px;
-	  width: 150px;
-      height: 85px;
-	}
-    .article{
-		display:flex;
-		background:white;
-	}
-	.articleContent{
-	  margin-left:10px;
-	  margin-top:10px;
-	}
-    .articleTitle{
-		color: #000000;
-		margin-top:10px;
-		font-size:18px;
-	}
-	.articleTime{
-		margin-top:10px;
-		font-size:14px;
-		color:#A5A5A5;
-	}
-	.divider{
-		background-color:#EAEAEA;
-		width:100%;
-		height:1px;
-		
-	}
-    a{
-       text-decoration:none;
-    }
-    a:hover{
-     color:red;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        /* 头部 */
+        .header {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            background: #5E419D;
+        }
 
+        .logo {
+            width: 35px;
+            height: 35px;
+            margin-top: 12px;
+        }
 
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: center;
+            color: #ffffff
+        }
+        .twoCode {
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-right: 10px;
+            float: left;
+        }
 
+        nav {
+            float: left;
+            margin-left: 5px;
+            color: salmon;
+        }
 
+        /* 侧边 background: #B3B3FF; */
+        .sideBar {
+            width: 300px;
+            height: 100%;
+            background: #EAEAEA;
+        }
+
+        .sideBar > .personalInfo, .awards {
+            padding-left: 20px;
+        }
+
+        .sideBar > .selfEva {
+            padding: 0 5px;
+        }
+
+        .sideBar > div > h3 {
+            color: brown;
+            font-weight: 500;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .sideBar > div > ol > li {
+            font-size: 15px;
+        }
+
+        .personalInfo {
+            padding: 5px;
+        }
+
+        .personalInfo {
+            margin-top: 8px;
+        }
+
+        .awards {
+            margin-top: 8px;
+        }
+
+        /*主要内容*/
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 320px;
+        }
+
+        .articleImg {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 85px;
+        }
+
+        .articleImgBig {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            margin-top: 15px;
+            margin-left: 150px;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        .articleImg:hover ~ .articleImgBig {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            margin-top: 15px;
+            margin-left: 150px;
+            margin-bottom: 10px;
+            display: flex;
+            border: 1px solid #A5A5A5;
+        }
+
+        .article {
+            display: flex;
+            background: white;
+        }
+
+        .articleContent {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .articleName {
+            color: #000000;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .articleTime {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #A5A5A5;
+        }
+
+        .divider {
+            background-color: #EAEAEA;
+            width: 100%;
+            height: 1px;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
 
 
     </style>
@@ -132,18 +168,10 @@
     </script>
 </head>
 <body>
-<!-- Header -->
-<header>
-    <nav>
-        <div style="display:flex">
-            <img class="logo" src="./openai_logo.png"/>
-            <div class="title">
-                智能AI助手
-            </div>
-        </div>
-    </nav>
-</header>
-
+<div class="header">
+    <img class="logo" src="./openai_logo.png"/>
+    <div class="title">智能AI助手</div>
+</div>
 <!-- Content -->
 <section>
     <!-- SideBar -->
@@ -201,42 +229,157 @@
 </section>
 </body>
 <script>
-   var arr = [
-            {titleName:'Android 自定义控件 onDraw() onLayout()方法',createTime:'2023-05-30 14:05:50',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130947018'},
-            {titleName:'Android 自定义圆角ImageView',createTime:'2023-05-30 13:53:51',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130946706'},
-            {titleName:'Git cherry-pick命令详解',createTime:'2023-05-29 14:59:35',srcPath:'./git_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130928222'},
-            {titleName:'Android 加载gif图，Glide',createTime:'2023-05-26 17:02:23',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130890506'},
-            {titleName:'Android 自定义可拖动悬浮按钮',createTime:'2023-05-24 11:00:29',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130842770'},
-            {titleName:'LiveData真的会被Flow替代吗？',createTime:'2023-05-24 09:57:34',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130840820'},
-            {titleName:'Android 自动、拨打电话、拨号',createTime:'2023-05-18 14:46:12',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130746822'},
-            {titleName:'国产ChatGpt、AI模型盘点',createTime:'2023-05-16 14:46:12',srcPath:'./chatgpt_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130724461'},
-            {titleName:'ChatGPT：如何使用正在改变一切的 AI 聊天机器人',createTime:'2023-05-17 11:17:14',srcPath:'./chatgpt_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130721639'},
-            {titleName:'Android Room数据库用法',createTime:'2023-05-17 11:03:58',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130721336'},
-            {titleName:'Fiddler 筛选',createTime:'2023-05-16 17:08:42',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130708949'},
-            {titleName:'Android mvvm模式原理 面试',createTime:'2023-05-16 13:44:56',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130703868'},
-            {titleName:'Android mvvm模式简单使用',createTime:'2023-05-16 13:37:41',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130703742'},
-            {titleName:'ChatGPT的功能，优势，以及在生活中的应用',createTime:'2023-05-16 10:50:04',srcPath:'./chatgpt_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130700820'},
-            {titleName:'WebView的缓存机制',createTime:'2023-05-16 11:05:38',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130700116'},
-            {titleName:'简单的Java线程池的实现',createTime:'2023-05-16 10:25:56',srcPath:'./java_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130699938'},
-            {titleName:'Android EditView不换行的原因',createTime:'2023-05-16 11:04:58',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130646451'},
-            {titleName:'Android 相机 相册',createTime:'2023-05-16 11:07:04',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130636515'},
-            {titleName:'Java 二叉树 红黑树算法',createTime:'2023-05-12 10:05:20',srcPath:'./java_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/130635743'},
-            {titleName:'ChatGPT 对话式,大型语言模型',createTime:'2023-05-17 10:44:38',srcPath:'./chatgpt_icon.jpg',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/129010790'},
-            {titleName:'ML Kit 通过图片识别文字',createTime:'2022-11-29 17:15:08',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/128101271'},
-            {titleName:'Android 自动化操作，辅助功能无障碍，在其他应用的上层显示',createTime:'2023-04-06 13:34:32',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/127067421'},
-            {titleName:'Android 小组件 小部件',createTime:'2022-07-26 14:45:36',srcPath:'./android_icon.png',hrefUrl:'https://blog.csdn.net/YDHIT/article/details/125994206'}
-        ];
-        function toDetail(position){
-           window.location.href = arr[position].hrefUrl;
-        };
+    var arr = [
+        {
+            name: 'Android 自定义控件 onDraw() onLayout()方法',
+            createTime: '2023-05-30 14:05:50',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130947018'
+        },
+        {
+            name: 'Android 自定义圆角ImageView',
+            createTime: '2023-05-30 13:53:51',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130946706'
+        },
+        {
+            name: 'Git cherry-pick命令详解',
+            createTime: '2023-05-29 14:59:35',
+            srcPath: './git_icon.jpg',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130928222'
+        },
+        {
+            name: 'Android 加载gif图，Glide',
+            createTime: '2023-05-26 17:02:23',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130890506'
+        },
+        {
+            name: 'Android 自定义可拖动悬浮按钮',
+            createTime: '2023-05-24 11:00:29',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130842770'
+        },
+        {
+            name: 'LiveData真的会被Flow替代吗？',
+            createTime: '2023-05-24 09:57:34',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130840820'
+        },
+        {
+            name: 'Android 自动、拨打电话、拨号',
+            createTime: '2023-05-18 14:46:12',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130746822'
+        },
+        {
+            name: '国产ChatGpt、AI模型盘点',
+            createTime: '2023-05-16 14:46:12',
+            srcPath: './chatgpt_icon.jpg',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130724461'
+        },
+        {
+            name: 'ChatGPT：如何使用正在改变一切的 AI 聊天机器人',
+            createTime: '2023-05-17 11:17:14',
+            srcPath: './chatgpt_icon.jpg',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130721639'
+        },
+        {
+            name: 'Android Room数据库用法',
+            createTime: '2023-05-17 11:03:58',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130721336'
+        },
+        {
+            name: 'Fiddler 筛选',
+            createTime: '2023-05-16 17:08:42',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130708949'
+        },
+        {
+            name: 'Android mvvm模式原理 面试',
+            createTime: '2023-05-16 13:44:56',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130703868'
+        },
+        {
+            name: 'Android mvvm模式简单使用',
+            createTime: '2023-05-16 13:37:41',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130703742'
+        },
+        {
+            name: 'ChatGPT的功能，优势，以及在生活中的应用',
+            createTime: '2023-05-16 10:50:04',
+            srcPath: './chatgpt_icon.jpg',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130700820'
+        },
+        {
+            name: 'WebView的缓存机制',
+            createTime: '2023-05-16 11:05:38',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130700116'
+        },
+        {
+            name: '简单的Java线程池的实现',
+            createTime: '2023-05-16 10:25:56',
+            srcPath: './java_icon.jpg',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130699938'
+        },
+        {
+            name: 'Android EditView不换行的原因',
+            createTime: '2023-05-16 11:04:58',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130646451'
+        },
+        {
+            name: 'Android 相机 相册',
+            createTime: '2023-05-16 11:07:04',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130636515'
+        },
+        {
+            name: 'Java 二叉树 红黑树算法',
+            createTime: '2023-05-12 10:05:20',
+            srcPath: './java_icon.jpg',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/130635743'
+        },
+        {
+            name: 'ChatGPT 对话式,大型语言模型',
+            createTime: '2023-05-17 10:44:38',
+            srcPath: './chatgpt_icon.jpg',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/129010790'
+        },
+        {
+            name: 'ML Kit 通过图片识别文字',
+            createTime: '2022-11-29 17:15:08',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/128101271'
+        },
+        {
+            name: 'Android 自动化操作，辅助功能无障碍，在其他应用的上层显示',
+            createTime: '2023-04-06 13:34:32',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/127067421'
+        },
+        {
+            name: 'Android 小组件 小部件',
+            createTime: '2022-07-26 14:45:36',
+            srcPath: './android_icon.png',
+            hrefUrl: 'https://blog.csdn.net/YDHIT/article/details/125994206'
+        }
+    ];
 
-        var html='';
-        for(var i=0;i<arr.length;i++){
-           html+='<div class="article" onclick="toDetail('+i+')"> <img class="articleImg" src='+arr[i].srcPath+'></img> <div class="articleContent"> <a class="articleTitle" href='+arr[i].hrefUrl+'>'+arr[i].titleName+'</a> <p class="articleTime">'+arr[i].createTime+'</p> </div> </div><div class="divider"></div>';
-        };
-        document.getElementById('contentdiv').innerHTML = html;
+    function toDetail(position) {
+        window.location.href = arr[position].hrefUrl;
+    };
 
-
+    var html = '';
+    for (var i = 0; i < arr.length; i++) {
+        html += '<div class="article" onclick="toDetail(' + i + ')"> <img class="articleImg" src=' + arr[i].srcPath + '></img> <img class="articleImgBig" src="https://iaoqbthyohbschdxnvya.supabase.co/storage/v1/object/public/pictures/wxsmall.png"></img> <div class="articleContent"> <a class="articleName" href=' + arr[i].hrefUrl + '>' + arr[i].name + '</a> <p class="articleTime">' + arr[i].createTime + '</p> </div> </div><div class="divider"></div>';
+    }
+    ;
+    document.getElementById('contentdiv').innerHTML = html;
 
 
 </script>
