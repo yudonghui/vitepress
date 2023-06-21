@@ -56,8 +56,13 @@
 <div id="meilai" class="container">
 
 </div>
-
+<textarea id="textarea" placeholder="请输入" style="min-height:100px;width:500px; padding: 5px"></textarea>
+<button type="button"
+        style="padding-left: 10px;padding-right: 10px;padding-top:5px;padding-bottom:5px;margin-left: 10px"
+        onclick="sendMsg()">发送
+</button>
 </body>
+<script src="./jquery-3.7.0.min.js"></script>
 <script>
 
     let listBanner = [
@@ -272,5 +277,23 @@
         htmlMl += '<a href=' + listMeilai[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listMeilai[i].srcPath + '></img><div class="title">' + listMeilai[i].titleName + '</div></div></a>';
     }
     document.getElementById('meilai').innerHTML = htmlMl;
+
+
+    function sendMsg() {
+        const textarea = document.getElementById('textarea');
+        const settings = {
+            "url": 'http://localhost:8080/api',
+            "method": "POST",
+            "timeout": 3000,
+            "headers": {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "data": {"name": textarea.value},
+        };
+
+        $.ajax(settings).done(function (response) {
+            alert("发送成功")
+        });
+    }
 </script>
 </html>
