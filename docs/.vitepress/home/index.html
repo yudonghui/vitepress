@@ -56,11 +56,25 @@
 <div id="meilai" class="container">
 
 </div>
-<textarea id="textarea" placeholder="请输入" style="min-height:100px;width:500px; padding: 5px"></textarea>
-<button type="button"
-        style="padding-left: 10px;padding-right: 10px;padding-top:5px;padding-bottom:5px;margin-left: 10px"
-        onclick="sendMsg()">发送
-</button>
+<div style="display: flex">
+    <div>
+        <textarea id="groupName" placeholder="请输入群组名称" style="width:500px; padding: 5px"></textarea>
+        <textarea id="tagroup" placeholder="请输入" style="min-height:100px;width:500px; padding: 5px"></textarea>
+        <button type="button"
+                style="padding-left: 10px;padding-right: 10px;padding-top:5px;padding-bottom:5px;margin-left: 10px"
+                onclick="sendMsgGroup()">发送
+        </button>
+    </div>
+    <div>
+        <textarea id="friendName" placeholder="请输入好友名称" style="width:500px; padding: 5px"></textarea>
+        <textarea id="tafriend" placeholder="请输入" style="min-height:100px;width:500px; padding: 5px"></textarea>
+        <button type="button"
+                style="padding-left: 10px;padding-right: 10px;padding-top:5px;padding-bottom:5px;margin-left: 10px"
+                onclick="sendMsgFriend()">发送
+        </button>
+    </div>
+</div>
+
 </body>
 <script src="./jquery-3.7.0.min.js"></script>
 <script>
@@ -289,20 +303,45 @@
     document.getElementById('meilai').innerHTML = htmlMl;
 
 
-    function sendMsg() {
-        const textarea = document.getElementById('textarea');
+    function sendMsgGroup() {
+        const groupName = document.getElementById('groupName');
+        const textarea = document.getElementById('tagroup');
         const settings = {
-            "url": 'https://wxbot.zeabur.app/api',
+            //"url": 'https://wxbot.zeabur.app/api',
+            "url": 'https://wxbot.zeabur.app/sendMsgGroup',
             "method": "POST",
             "timeout": 3000,
             "headers": {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            "data": {"name": textarea.value},
+            "data": {"content": textarea.value, "group": groupName.value},
         };
 
         $.ajax(settings).done(function (response) {
-            alert("发送成功")
+            window.alert("发送成功")
+        }).always(function (jqXHR, textStatus) {
+            window.alert("发送完成")
+        });
+    }
+
+    function sendMsgFriend() {
+        const friendName = document.getElementById('friendName');
+        const textarea = document.getElementById('tafriend');
+        const settings = {
+            //"url": 'https://wxbot.zeabur.app/api',
+            "url": 'https://wxbot.zeabur.app/sendMsgFriend',
+            "method": "POST",
+            "timeout": 3000,
+            "headers": {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "data": {"content": textarea.value, "friend": friendName.value},
+        };
+
+        $.ajax(settings).done(function (response) {
+            window.alert("发送成功")
+        }).always(function (jqXHR, textStatus) {
+            window.alert("发送完成")
         });
     }
 </script>
