@@ -70,20 +70,14 @@
         <textarea id="tafriend" placeholder="请输入" style="min-height:100px;width:500px; padding: 5px"></textarea>
         <button type="button"
                 style="padding-left: 10px;padding-right: 10px;padding-top:5px;padding-bottom:5px;margin-left: 10px"
-                onclick="sendPay()">发送
+                onclick="sendMsgFriend()">发送
         </button>
     </div>
 </div>
 
 </body>
 <script src="./jquery-3.7.0.min.js"></script>
-<script src="https://cdn.paddle.com/paddle/paddle.js"></script>
 <script>
-    function sendPay() {
-        Paddle.Setup({vendor: 13320});
-        Paddle.Environment.set('sandbox');
-        Paddle.Checkout.open({ product: 61021 });
-    }
 
     let listBanner = [
         {
@@ -356,5 +350,4 @@
         });
     }
 </script>
-
 </html>
