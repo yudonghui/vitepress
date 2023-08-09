@@ -53,7 +53,7 @@
 <div id="kaifang" class="container">
 
 </div>
-<div id="meilai" class="container">
+<div id="tools" class="container">
 
 </div>
 <div style="display: flex">
@@ -289,23 +289,23 @@
     document.getElementById('kaifang').innerHTML = htmlKF;
 
 
-    let listMeilai = [
+    let listTools = [
         {
-            titleName: '上海测试',
-            srcPath: 'imgs/meilai.png',
-            hrefUrl: 'http://crmuat.shmylike.cn/crm/index.do'
+            titleName: '小彬网',
+            srcPath: 'imgs/xiaobin.png',
+            hrefUrl: 'https://www.xiaobinwang.cc/user/user.html'
         },
         {
-            titleName: '苏州美莱',
-            srcPath: 'imgs/meilai.png',
-            hrefUrl: 'http://suzhouml.mylike.com/crm/index.do'
+            titleName: '小彬网',
+            srcPath: 'imgs/xiaobin.png',
+            hrefUrl: 'https://www.xiaobinwang.cc/category-31_4.html'
         },
     ]
     let htmlMl = '';
-    for (let i = 0; i < listMeilai.length; i++) {
-        htmlMl += '<a href=' + listMeilai[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listMeilai[i].srcPath + '></img><div class="title">' + listMeilai[i].titleName + '</div></div></a>';
+    for (let i = 0; i < listTools.length; i++) {
+        htmlMl += '<a href=' + listTools[i].hrefUrl + '><div class="iconBg"><img class="iconLogo" src=' + listTools[i].srcPath + '></img><div class="title">' + listTools[i].titleName + '</div></div></a>';
     }
-    document.getElementById('meilai').innerHTML = htmlMl;
+    document.getElementById('tools').innerHTML = htmlMl;
 
 
     function sendMsgGroup() {

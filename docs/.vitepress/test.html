@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>lintOptions
+</head>
+<body>
+<a href="#!" class="paddle_button" data-product="61021">Buy Now!</a>
+<button onclick="sendMsgGroup()">打开</button>
+<button onclick="sendMsgWeb()">webHook</button>
+<script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+<script type="text/javascript">
+    Paddle.Environment.set('sandbox');
+    Paddle.Setup({vendor: 13320});
+
+    function sendMsgGroup() {
+
+        Paddle.Checkout.open({product: 61021, email: "237834883@qq.com"});
+    }
+    function sendMsgWeb() {
+        Paddle.Checkout.open({product: 61021});
+    }
+</script>
+</body>
+
+</html>
