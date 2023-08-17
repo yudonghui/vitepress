@@ -1,0 +1,16 @@
+{
+  "id": "2970585",
+  "name": "xingzhuan",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1005713",
+      "name": "mail",
+      "font_class": "mail",
+      "unicode": "e7bd",
+      "unicode_decimal": 59325
+    }
+  ]
+}
